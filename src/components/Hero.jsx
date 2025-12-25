@@ -2,30 +2,9 @@ import { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const slides = [
-  {
-    id: 1,
-    image: "/Slide1.jpg",
-    heading: "Build Scalable & Reliable Software",
-    subheading: "Engineering solutions that grow with your business",
-    description:
-      "We design and develop modern web applications using best practices in performance, security, and scalability.",
-  },
-  {
-    id: 2,
-    image: "/Slide2.jpg",
-    heading: "Modern Web & Cloud Solutions",
-    subheading: "From idea to production-ready systems",
-    description:
-      "Our expertise covers frontend, backend, APIs, and cloud deployment to deliver complete IT solutions.",
-  },
-  {
-    id: 3,
-    image: "/Slide3.jpg",
-    heading: "Technology That Solves Real Problems",
-    subheading: "Focused on quality, speed, and maintainability",
-    description:
-      "We help startups and businesses turn complex requirements into clean, maintainable software.",
-  },
+  "/RVK-slide3.jpg",
+  "/RVK-slide2.jpg",
+  "/RVK-Slide1.jpg",
 ];
 
 const HeroSlider = () => {
@@ -41,51 +20,22 @@ const HeroSlider = () => {
   }, []);
 
   return (
-  <section className="relative bg-gradient-to-br from-black/60 via-black/90 to-orange-400 text-white overflow-hidden">
-
-      <div className="max-w-7xl mx-auto px-4 pt-24 pb-16 lg:pt-36 lg:pb-24">
-        <div className="grid lg:grid-cols-[75%_25%] gap-6 items-center">
-          
-          {/* IMAGE SECTION */}
-          <div className="order-1 lg:order-2 flex justify-center">
-            <div className="h-[180px] sm:h-[220px] lg:h-[360px] w-full flex items-center justify-center">
-              <img
-                src={slides[current].image}
-                alt={`Slide ${current + 1}`}
-                className="max-h-full max-w-full object-contain transition-opacity duration-500"
-              />
-            </div>
-          </div>
-
-          {/* TEXT SECTION */}
-          <div className="order-2 lg:order-1 space-y-3 text-center lg:text-left">
-            <h2 className="text-lg sm:text-xl lg:text-4xl font-semibold leading-snug">
-              {slides[current].heading}
-            </h2>
-
-            <h3 className="text-base sm:text-lg lg:text-2xl text-white/90">
-              {slides[current].subheading}
-            </h3>
-
-            <p className="text-sm lg:text-base text-white/80 max-w-xl mx-auto lg:mx-0">
-              {slides[current].description}
-            </p>
-
-            <p className="font-medium text-sm lg:text-base">
-              Let’s build something powerful together 🚀
-            </p>
-
-            <button className="bg-yellow-400 text-black px-4 py-2 lg:px-6 lg:py-3 rounded font-semibold text-sm lg:text-base hover:bg-yellow-300 transition">
-              Book a Free Consultation
-            </button>
-          </div>
-        </div>
+    <section className="relative w-full overflow-hidden">
+      {/* SLIDE */}
+      <div className="max-w-full mx-auto pt-16 pb-5 lg:pt-16 lg:pb-14">
+        <img
+          src={slides[current]}
+          alt={`Banner ${current + 1}`}
+          className="w-full object-cover transition-opacity duration-500"
+        />
       </div>
 
       {/* LEFT ARROW */}
       <button
         onClick={prev}
-        className="absolute left-3 top-1/2 -translate-y-1/2 text-white text-xl opacity-70 hover:opacity-100"
+        className="absolute left-4 top-1/2 -translate-y-1/2
+                   bg-black/40 text-white p-2 rounded-full
+                   hover:bg-black/60 transition"
         aria-label="Previous Slide"
       >
         <FaChevronLeft />
@@ -94,7 +44,9 @@ const HeroSlider = () => {
       {/* RIGHT ARROW */}
       <button
         onClick={next}
-        className="absolute right-3 top-1/2 -translate-y-1/2 text-white text-xl opacity-70 hover:opacity-100"
+        className="absolute right-4 top-1/2 -translate-y-1/2
+                   bg-black/40 text-white p-2 rounded-full
+                   hover:bg-black/60 transition"
         aria-label="Next Slide"
       >
         <FaChevronRight />
@@ -106,9 +58,8 @@ const HeroSlider = () => {
           <span
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-2.5 h-2.5 rounded-full cursor-pointer ${
-              index === current ? "bg-white" : "bg-white/40"
-            }`}
+            className={`w-3 h-3 rounded-full cursor-pointer transition
+              ${index === current ? "bg-white" : "bg-white/40"}`}
           />
         ))}
       </div>

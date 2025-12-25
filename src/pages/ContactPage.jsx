@@ -76,12 +76,12 @@ const ContactSection = () => {
               <div className="space-y-5">
                 <div className="flex items-center gap-4">
                   <FaEnvelope className="text-lg text-orange-400" />
-                  <span>contact@rvksoftware.com</span>
+                  <span>info@rvksoftware.com</span>
                 </div>
 
                 <div className="flex items-center gap-4">
                   <FaPhoneAlt className="text-lg text-orange-400" />
-                  <span>+91 9XXXXXXXXX</span>
+                  <span>+91 902409959</span>
                 </div>
 
                 <div className="flex items-center gap-4">
@@ -109,7 +109,6 @@ const ContactSection = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="John Doe"
                   className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
                 />
               </div>
@@ -120,7 +119,6 @@ const ContactSection = () => {
                 </label>
                 <input
                   type="email"
-                  placeholder="john@example.com"
                   className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
                 />
               </div>

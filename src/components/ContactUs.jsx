@@ -16,12 +16,12 @@ const ContactSection = () => {
           <div className="space-y-5">
             <div className="flex items-center gap-4">
               <FaEnvelope className="text-lg text-orange-400" />
-              <span>contact@rvksoftware.com</span>
+              <span>info@rvksoftware.com</span>
             </div>
 
             <div className="flex items-center gap-4">
               <FaPhoneAlt className="text-lg text-orange-400" />
-              <span>+91 9XXXXXXXXX</span>
+              <span>+91 902409959</span>
             </div>
 
             <div className="flex items-center gap-4">

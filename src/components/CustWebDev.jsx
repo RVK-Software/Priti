@@ -66,7 +66,7 @@ const CustWebDev = () => {
                 </p>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap flex-col gap-3">
                   {service.tags.map((tag, i) => (
                     <span
                       key={i}

@@ -4,6 +4,8 @@ import Services from "../components/Services";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CustWebDev from "../components/CustWebDev";
+import TechStack from "../components/TechStack";
+import Partners from "../components/Partners";
 
 const LandingPage = () => {
   return (
@@ -12,6 +14,8 @@ const LandingPage = () => {
       <AboutUs />
       <Services />
       <CustWebDev />
+      <TechStack />
+      <Partners />
       
     </>
   );

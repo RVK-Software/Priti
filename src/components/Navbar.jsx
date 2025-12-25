@@ -10,6 +10,33 @@ import {
 } from "react-icons/fa";
 
 const Navbar = () => {
+  const servicesMenu = [
+    {
+      label: "Web Development",
+      path: "/services/web-development",
+    },
+    {
+      label: "UI / UX Design",
+      path: "/services/ui-ux",
+    },
+    {
+      label: "Cloud & DevOps",
+      path: "/services/cloud",
+    },
+    {
+      label: "Cloud & DevOps",
+      path: "/services/cloud",
+    },
+    {
+      label: "Cloud & DevOps",
+      path: "/services/cloud",
+    },
+    {
+      label: "Cloud & DevOps",
+      path: "/services/cloud",
+    },
+  ];
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
@@ -22,22 +49,22 @@ const Navbar = () => {
   return (
     <>
       {/* TOP BAR – Desktop Only */}
-      <div className="fixed top-0 w-full bg-black text-white text-sm z-50">
+      <div className="sticky top-0 w-full bg-black text-white text-sm z-50">
         <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-nowrap">
             <FaPhoneAlt className="text-orange-400" />
-            <span>+91 90240 9959</span>
+            <span className="whitespace-nowrap lg:text-sm text-[12px]">+91902409959</span>
           </div>
 
           <div className="flex items-center gap-2">
             <FaMapMarkerAlt className="text-orange-400" />
-            <span>Jaipur, Rajasthan</span>
+            <span className="lg:text-sm text-[12px] whitespace-nowrap">Jaipur, Rajasthan</span>
           </div>
         </div>
       </div>
 
       {/* NAVBAR */}
-      <header className="fixed w-full bg-gray-200 text-black shadow-md z-40 top-9 rounded-b-4xl">
+      <header className="fixed w-full bg-gray-200 text-black shadow-md z-40 lg:top-9 top-8 rounded-b-4xl">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* LOGO */}
           <div className="flex items-center gap-7">
@@ -46,7 +73,7 @@ const Navbar = () => {
               alt="RVK Software Logo"
               border="1px solid black"
               background="white"
-              className="w-17 h-17 object-contain"
+              className="w-27 h-17 object-contain"
             />
           </div>
 
@@ -64,25 +91,16 @@ const Navbar = () => {
                   </Link>
 
                   {/* DROPDOWN */}
-                  <div className="absolute left-0 top-full mt-3 w-56 bg-black border text-white border-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <Link
-                      to="/services/web-development"
-                      className="block px-4 py-3 hover:bg-gray-900 hover:text-orange-400 transition"
-                    >
-                      Web Development
-                    </Link>
-                    <Link
-                      to="/services/ui-ux"
-                      className="block px-4 py-3 hover:bg-gray-900 hover:text-orange-400 transition"
-                    >
-                      UI / UX Design
-                    </Link>
-                    <Link
-                      to="/services/cloud"
-                      className="block px-4 py-3 hover:bg-gray-900 hover:text-orange-400 transition"
-                    >
-                      Cloud & DevOps
-                    </Link>
+                  <div className="absolute left-0 top-full mt-3 w-56 bg-black border border-gray-800 rounded-md shadow-lg text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    {servicesMenu.map((item, index) => (
+                      <Link
+                        key={index}
+                        to={item.path}
+                        className="block px-4 py-1 text-sm hover:bg-gray-900 hover:text-orange-400 transition"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
                   </div>
                 </div>
               ) : (
@@ -116,7 +134,6 @@ const Navbar = () => {
       >
         {/* HEADER */}
         <div className="flex justify-between items-center px-6 py-5  ">
-          
           <div className="text-xl font-bold">
             RVK <span className="text-yellow-400">Software</span>
           </div>

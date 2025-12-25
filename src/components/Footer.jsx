@@ -10,9 +10,9 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-black/40 via-black/90 to-orange-400 text-white">
+    <footer className="bg-linear-to-t from-black/70  via-orange-300 to-white text-black">
       {/* MAIN FOOTER */}
-      <div className="max-w-7xl mx-auto px-6 py-14">
+      <div className="max-w-7xl mx-auto px-6 py-10">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           
           {/* COMPANY INFO */}
@@ -21,27 +21,24 @@ const Footer = () => {
               <img
                 src="/RVK-LOGO1.png"
                 alt="Company Logo"
-                className="w-13 h-10"
+                className="w-34 h-21"
               />
-              <h2 className="text-xl font-bold">
-                RVK Software 
-              </h2>
             </div>
 
-            <p className="text-sm text-white/80">
+            <p className="text-sm text-black">
               The Heritage Smile of Rajasthan. Providing ethical,
               professional, and advanced IT solutions with compassion.
             </p>
 
             <div className="space-y-2 text-sm">
               <p className="flex items-start gap-2">
-                <FaMapMarkerAlt className="mt-1" />
+                <FaMapMarkerAlt className="mt-1 text-white" />
                 Jaipur, Rajasthan, India
               </p>
 
               <p className="flex items-center gap-2">
-                <FaPhoneAlt />
-                +91 86973 39116
+                <FaPhoneAlt className="mt-1 text-white" />
+                +91 902409959
               </p>
             </div>
           </div>
@@ -52,7 +49,7 @@ const Footer = () => {
               Our Services
             </h3>
 
-            <ul className="space-y-2 text-sm text-white/80">
+            <ul className="space-y-2 text-sm text-black">
               <li>Web Development</li>
               <li>Web Designing</li>
               <li>Digital marketing</li>
@@ -68,7 +65,7 @@ const Footer = () => {
               Quick Links
             </h3>
 
-            <ul className="space-y-2 text-sm text-white/80">
+            <ul className="space-y-2 text-sm text-black">
               <li>About Us</li>
               <li>Contact Us</li>
             </ul>
@@ -83,28 +80,28 @@ const Footer = () => {
             <div className="flex gap-4">
               <a
                 href="#"
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-yellow-400 hover:text-black transition"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/50 hover:bg-orange-400 hover:text-white transition"
               >
                 <FaFacebookF />
               </a>
 
               <a
                 href="#"
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-yellow-400 hover:text-black transition"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/50 hover:bg-orange-400 hover:text-white transition"
               >
                 <FaInstagram />
               </a>
 
               <a
                 href="#"
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-yellow-400 hover:text-black transition"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/50 hover:bg-orange-400 hover:text-white transition"
               >
                 <FaLinkedinIn />
               </a>
 
               <a
                 href="#"
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-yellow-400 hover:text-black transition"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/50 hover:bg-orange-400 hover:text-white transition"
               >
                 <FaYoutube />
               </a>
@@ -115,10 +112,10 @@ const Footer = () => {
 
       {/* COPYRIGHT BAR */}
       <div className="border-t border-white/20">
-        <div className="max-w-7xl mx-auto px-6 py-4 text-center text-sm text-white/80">
-          © {new Date().getFullYear()} Olivegreen Dental Clinic.  
+        <div className="max-w-7xl mx-auto px-6 py-4 text-center text-sm text-white">
+          © {new Date().getFullYear()}{" "}
           Developed & Maintained by{" "}
-          <span className="font-semibold text-yellow-400">
+          <span className="font-semibold text-orange-500">
             RVK Software
           </span>
         </div>

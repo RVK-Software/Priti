@@ -6,6 +6,7 @@ import ServicesPage from "./pages/ServicesPage";
 import Footer from "./components/Footer";
 import LandingPage from "./pages/LandingPage";
 import ContactPage from "./pages/ContactPage";
+import CTA from "./components/CTA";
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
-
+      <CTA />
       <Footer />
     </>
   );

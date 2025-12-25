@@ -60,12 +60,12 @@ const AboutUs = () => {
       </div>
 
       {/* OUR VISION SECTION */}
-      <div className="bg-black pt-14 px-6">
-        <div className="max-w-7xl mx-auto text-center text-white">
+      <div className="bg-black py-14 px-6">
+        <div className="mx-auto text-center text-white">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Our Vision
           </h2>
-          <p className="text-gray-300 max-w-3xl mx-auto mb-12">
+          <p className="text-gray-300 max-w-3xl mx-auto mb-10">
             We aim to empower businesses, creators, and talent through our innovative solutions.
             Our upcoming application, <span className="text-orange-400 font-semibold">Navsankalp</span>, will transform the way MSMEs and professionals operate in the digital space.
           </p>
@@ -74,30 +74,30 @@ const AboutUs = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white rounded-2xl p-6 text-black shadow-lg hover:scale-105 transition">
               <FaRocket className="text-orange-400 text-3xl mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Digital Tools</h3>
+              <h3 className="text-xl font-semibold mb-2">MSMEs</h3>
               <p className="text-gray-700 text-sm">
-                Tools for business scaling and market expansion for MSMEs.
+                Smart tools to scale operations, boost visibility, and drive sustainable growth.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-6 text-black shadow-lg hover:scale-105 transition">
               <FaLightbulb className="text-orange-400 text-3xl mb-4" />
               <h3 className="text-xl font-semibold mb-2">Influencers</h3>
               <p className="text-gray-700 text-sm">
-                Specialized tools for the creator economy and brand partnerships.
+                End-to-end solutions to monetize content and manage brand collaborations.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-6 text-black shadow-lg hover:scale-105 transition">
               <FaUsers className="text-orange-400 text-3xl mb-4" />
               <h3 className="text-xl font-semibold mb-2">Job Seekers</h3>
               <p className="text-gray-700 text-sm">
-                Connecting talent with opportunities through intuitive platforms.
+                Direct access to verified opportunities with growth-focused companies.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-6 text-black shadow-lg hover:scale-105 transition">
               <FaBuilding className="text-orange-400 text-3xl mb-4" />
               <h3 className="text-xl font-semibold mb-2">Property Owners</h3>
               <p className="text-gray-700 text-sm">
-                Streamlined management and listing solutions for properties.
+                Simplified property listing, management, and customer engagement systems.
               </p>
             </div>
           </div>
