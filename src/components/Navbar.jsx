@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
 import {
   FaPhoneAlt,
   FaMapMarkerAlt,
@@ -9,159 +8,234 @@ import {
   FaChevronDown,
 } from "react-icons/fa";
 
+/* SERVICES MENU (UX only, all redirect to /services) */
+const servicesMenu = [
+  { label: "Web Development" },
+  { label: "App Development" },
+  { label: "Cloud & DevOps" },
+  { label: "Mobile App Development" },
+  { label: "Custom Software Development" },
+];
+
+/* TECHNOLOGIES MENU */
+const technologiesMenu = [
+  { label: "HTML", path: "/technologies/html" },
+  { label: "CSS", path: "/technologies/css" },
+  { label: "JavaScript", path: "/technologies/javascript" },
+  { label: "React JS", path: "/technologies/react-js" },
+  { label: "React Native", path: "/technologies/react-native" },
+  { label: "Node.js", path: "/technologies/aws" },
+  { label: "AWS & Deployment", path: "/technologies/aws" },
+];
+
 const Navbar = () => {
-  const servicesMenu = [
-    {
-      label: "Web Development",
-      path: "/services/web-development",
-    },
-    {
-      label: "UI / UX Design",
-      path: "/services/ui-ux",
-    },
-    {
-      label: "Cloud & DevOps",
-      path: "/services/cloud",
-    },
-    {
-      label: "Cloud & DevOps",
-      path: "/services/cloud",
-    },
-    {
-      label: "Cloud & DevOps",
-      path: "/services/cloud",
-    },
-    {
-      label: "Cloud & DevOps",
-      path: "/services/cloud",
-    },
-  ];
-
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Contact Us", path: "/contact" },
-  ];
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [techOpen, setTechOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileTechOpen, setMobileTechOpen] = useState(false);
 
   return (
     <>
-      {/* TOP BAR – Desktop Only */}
+      {/* TOP BAR */}
       <div className="sticky top-0 w-full bg-black text-white text-sm z-50">
-        <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
-          <div className="flex items-center gap-2 flex-nowrap">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between">
+          <div className="flex items-center gap-2">
             <FaPhoneAlt className="text-orange-400" />
-            <span className="whitespace-nowrap lg:text-sm text-[12px]">+91902409959</span>
+            <span className="text-xs lg:text-sm">+91 90240 9959</span>
           </div>
-
           <div className="flex items-center gap-2">
             <FaMapMarkerAlt className="text-orange-400" />
-            <span className="lg:text-sm text-[12px] whitespace-nowrap">Jaipur, Rajasthan</span>
+            <span className="text-xs lg:text-sm">Jaipur, Rajasthan</span>
           </div>
         </div>
       </div>
 
       {/* NAVBAR */}
-      <header className="fixed w-full bg-gray-200 text-black shadow-md z-40 lg:top-9 top-8 rounded-b-4xl">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <header className="fixed w-full bg-gray-200 shadow-md z-40 lg:top-11 top-8">
+        <div className="max-w-7xl mx-auto px-6 h-18 flex items-center justify-between">
           {/* LOGO */}
-          <div className="flex items-center gap-7">
-            <img
-              src="/RVK-LOGO1.png"
-              alt="RVK Software Logo"
-              border="1px solid black"
-              background="white"
-              className="w-27 h-17 object-contain"
-            />
-          </div>
+          <img
+            src="/RVK-LOGO1.png"
+            alt="RVK Software"
+            className="h-12 object-contain"
+          />
 
           {/* DESKTOP MENU */}
-          <nav className="hidden lg:flex gap-8 font-medium text-black">
-            {navLinks.map((item) =>
-              item.name === "Services" ? (
-                <div key={item.name} className="relative group">
-                  <Link
-                    to={item.path}
-                    className="flex items-center gap-1 hover:text-orange-400 transition"
-                  >
-                    Services
-                    <FaChevronDown className="text-sm mt-0.5" />
-                  </Link>
+          <nav className="hidden lg:flex gap-8 font-medium">
+            <Link to="/" className="hover:text-orange-400">
+              Home
+            </Link>
 
-                  {/* DROPDOWN */}
-                  <div className="absolute left-0 top-full mt-3 w-56 bg-black border border-gray-800 rounded-md shadow-lg text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    {servicesMenu.map((item, index) => (
-                      <Link
-                        key={index}
-                        to={item.path}
-                        className="block px-4 py-1 text-sm hover:bg-gray-900 hover:text-orange-400 transition"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
+            <Link to="/about" className="hover:text-orange-400">
+              About Us
+            </Link>
+
+            {/* SERVICES */}
+            <div
+              className="relative"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
+              <Link
+                to="/services"
+                className="flex items-center gap-1 hover:text-orange-400"
+              >
+                Marketing <FaChevronDown />
+              </Link>
+
+              {servicesOpen && (
+                <div className="absolute top-full mt-3 w-56 bg-black text-white rounded-md shadow-lg">
+                  {servicesMenu.map((item) => (
+                    <Link
+                      key={item.label}
+                      to="/services"
+                      className="block px-4 py-2 text-sm hover:bg-gray-900 hover:text-orange-400"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
                 </div>
-              ) : (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className="hover:text-orange-400 transition"
-                >
-                  {item.name}
-                </Link>
-              )
-            )}
+              )}
+            </div>
+
+            {/* TECHNOLOGIES */}
+            <div
+              className="relative"
+              onMouseEnter={() => setTechOpen(true)}
+              onMouseLeave={() => setTechOpen(false)}
+            >
+              <Link
+                to="/technologies"
+                className="flex items-center gap-1 hover:text-orange-400"
+              >
+                Technologies <FaChevronDown />
+              </Link>
+
+              {techOpen && (
+                <div className="absolute top-full mt-3 w-64 bg-black text-white rounded-md shadow-lg">
+                  {technologiesMenu.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className="block px-4 py-2 text-sm hover:bg-gray-900 hover:text-orange-400"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+            <Link to="/career" className="hover:text-orange-400">
+              Careers
+            </Link>
+
+            <Link to="/contact" className="hover:text-orange-400">
+              Contact Us
+            </Link>
+
           </nav>
 
           {/* MOBILE MENU BUTTON */}
           <button
-            onClick={() => setMenuOpen(true)}
-            className="lg:hidden text-2xl text-gray-800"
-            aria-label="Open Menu"
+            className="lg:hidden text-2xl"
+            onClick={() => setMenuOpen(!menuOpen)}
           >
-            <FaBars />
+            {menuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
       </header>
 
-      {/* MOBILE FULLSCREEN MENU */}
-      <div
-        className={`fixed inset-0 bg-[#06284a] text-white z-50 transform transition-transform duration-300 ${
-          menuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        {/* HEADER */}
-        <div className="flex justify-between items-center px-6 py-5  ">
-          <div className="text-xl font-bold">
-            RVK <span className="text-yellow-400">Software</span>
-          </div>
-
-          <button
-            onClick={() => setMenuOpen(false)}
-            className="text-2xl"
-            aria-label="Close Menu"
-          >
-            <FaTimes />
-          </button>
-        </div>
-
-        {/* MENU ITEMS */}
-        <ul className="mt-8 space-y-6 px-6 text-lg font-medium">
-          {navLinks.map((item) => (
-            <li key={item.name}>
-              <Link
-                to={item.path}
-                onClick={() => setMenuOpen(false)}
-                className="block shadow-[0_12px_30px_-12px_rgba(0,0,0,0.7)] border-orange-400 pb-3 hover:text-yellow-400 transition"
-              >
-                {item.name}
+      {/* MOBILE MENU (GLASSMORPHIC, PARTIAL HEIGHT) */}
+      {menuOpen && (
+        <div className="fixed top-24 left-1/2 -translate-x-1/2 w-[92%] bg-white/40 backdrop-blur-xl shadow-2xl rounded-2xl z-50 lg:hidden">
+          <ul className="px-6 py-6 space-y-6 text-base font-medium text-gray-900">
+            <li>
+              <Link to="/" onClick={() => setMenuOpen(false)}>
+                Home
               </Link>
             </li>
-          ))}
-        </ul>
-      </div>
+
+            <li>
+              <Link to="/about" onClick={() => setMenuOpen(false)}>
+                About Us
+              </Link>
+            </li>
+
+            {/* SERVICES */}
+            <li>
+              <div className="flex justify-between items-center">
+                <Link
+                  to="/services"
+                  onClick={() => setMenuOpen(false)}
+                  className="hover:text-orange-400"
+                >
+                  Services
+                </Link>
+
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setMobileServicesOpen(!mobileServicesOpen);
+                  }}
+                >
+                  <FaChevronDown
+                    className={`transition-transform ${
+                      mobileServicesOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+              </div>
+
+              {mobileServicesOpen && (
+                <ul className="mt-3 space-y-3 text-sm pl-4 text-gray-700">
+                  {servicesMenu.map((item) => (
+                    <li key={item.label}>
+                      <Link
+                        to="/services"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+
+            {/* TECHNOLOGIES */}
+            <li>
+              <button
+                className="flex justify-between w-full"
+                onClick={() => setMobileTechOpen(!mobileTechOpen)}
+              >
+                Technologies <FaChevronDown />
+              </button>
+
+              {mobileTechOpen && (
+                <ul className="mt-3 space-y-3 text-sm pl-4 text-gray-700">
+                  {technologiesMenu.map((item) => (
+                    <li key={item.path}>
+                      <Link
+                        to={item.path}
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+
+            <li>
+              <Link to="/contact" onClick={() => setMenuOpen(false)}>
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
     </>
   );
 };

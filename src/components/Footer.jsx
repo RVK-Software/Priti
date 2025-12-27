@@ -25,22 +25,12 @@ const Footer = () => {
               />
             </div>
 
-            <p className="text-sm text-black">
+            <p className="text-[16px] text-black">
               The Heritage Smile of Rajasthan. Providing ethical,
               professional, and advanced IT solutions with compassion.
             </p>
 
-            <div className="space-y-2 text-sm">
-              <p className="flex items-start gap-2">
-                <FaMapMarkerAlt className="mt-1 text-white" />
-                Jaipur, Rajasthan, India
-              </p>
-
-              <p className="flex items-center gap-2">
-                <FaPhoneAlt className="mt-1 text-white" />
-                +91 902409959
-              </p>
-            </div>
+            
           </div>
 
           {/* SERVICES */}
@@ -113,9 +103,9 @@ const Footer = () => {
       {/* COPYRIGHT BAR */}
       <div className="border-t border-white/20">
         <div className="max-w-7xl mx-auto px-6 py-4 text-center text-sm text-white">
-          © {new Date().getFullYear()}{" "}
+          ©{new Date().getFullYear()}{" "}
           Developed & Maintained by{" "}
-          <span className="font-semibold text-orange-500">
+          <span className="font-semibold text-orange-600">
             RVK Software
           </span>
         </div>

@@ -1,39 +1,59 @@
 import { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const slides = [
-  "/RVK-slide3.jpg",
-  "/RVK-slide2.jpg",
-  "/RVK-Slide1.jpg",
+const desktopSlides = [
+  "/RVK-desktop-banner1.jpg",
+  "/RVK-desktop-banner2.jpg",
+  "/RVK-desktop-banner3.jpg",
+];
+
+const mobileSlides = [
+  "/RVK-mobile-banner1.jpg",
+  "/RVK-mobile-banner2.jpg",
+  "/RVK-mobile-banner3.jpg",
 ];
 
 const HeroSlider = () => {
   const [current, setCurrent] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect screen size
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkScreen(); // initial
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  const slides = isMobile ? mobileSlides : desktopSlides;
 
   const next = () => setCurrent((prev) => (prev + 1) % slides.length);
   const prev = () =>
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
 
+  // Auto slide
   useEffect(() => {
     const timer = setInterval(next, 6000);
     return () => clearInterval(timer);
-  }, []);
+  }, [slides.length]);
 
   return (
-    <section className="relative w-full overflow-hidden">
-      {/* SLIDE */}
-      <div className="max-w-full mx-auto pt-16 pb-5 lg:pt-16 lg:pb-14">
+    <section className="relative w-full lg:h-[690px]  overflow-hidden">
+      <div className="w-full h-full pt-16 pb-2 lg:pt-18 lg:pb-0">
         <img
           src={slides[current]}
           alt={`Banner ${current + 1}`}
-          className="w-full object-cover transition-opacity duration-500"
+          className="w-full h-full object-cover transition-opacity duration-500"
         />
       </div>
 
       {/* LEFT ARROW */}
       <button
         onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2
+        className="absolute left-3 lg:left-4 top-1/2 -translate-y-1/2
                    bg-black/40 text-white p-2 rounded-full
                    hover:bg-black/60 transition"
         aria-label="Previous Slide"
@@ -44,7 +64,7 @@ const HeroSlider = () => {
       {/* RIGHT ARROW */}
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2
+        className="absolute right-3 lg:right-4 top-1/2 -translate-y-1/2
                    bg-black/40 text-white p-2 rounded-full
                    hover:bg-black/60 transition"
         aria-label="Next Slide"

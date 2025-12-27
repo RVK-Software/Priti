@@ -19,7 +19,7 @@ const PartnersMarquee = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-white">
             Our <span className="text-orange-500">Trusted Partners</span>
           </h2>
-          <p className="mt-4 text-white max-w-3xl mx-auto">
+          <p className="mt-4 text-white text-xl max-w-3xl mx-auto">
             We collaborate with forward-thinking organizations to deliver
             scalable, high-impact digital solutions.
           </p>

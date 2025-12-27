@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const CTA = () => {
   return (
-    <section className="p-4 mb-20">
+    <section className="p-4 mb-4">
       <div className="max-w-7xl mx-auto">
         <div className="relative bg-black rounded-3xl overflow-hidden">
           <div className="grid lg:grid-cols-2 gap-8 items-center p-4 px-8">
@@ -27,11 +27,11 @@ const CTA = () => {
 
             {/* RIGHT CONTENT – MOBILE SCREENS */}
             <div className="relative flex justify-center items-center">
-              <div className="relative flex items-center">
+              <div className="relative flex items-center ">
                 <img
-                  src="/strip-servicess-app.webp"
+                  src="/CTA-image.jpg"
                   alt="App Screen"
-                  className="w-full h-full object-contain"
+                  className="w-full h-[380px] rounded-2xl object-contain"
                 />
               </div>
             </div>

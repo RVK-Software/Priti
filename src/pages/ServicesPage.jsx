@@ -1,41 +1,194 @@
-import { useState } from "react";
-import Services from "../components/Services";
+import { FaBullhorn, FaChartLine, FaUsers, FaLightbulb } from "react-icons/fa";
 import DigitalServices from "../components/Digital-services";
 
-const ServicesPage = () => {
-  const [selectedService, setSelectedService] = useState(null);
+const recommendations = [
+  {
+    icon: <FaBullhorn />,
+    title: "Clear Brand Positioning",
+    desc: "Define what makes your product unique. A clear value proposition helps customers instantly understand why they should choose you.",
+  },
+  {
+    icon: <FaUsers />,
+    title: "Audience-First Strategy",
+    desc: "Marketing works best when tailored to a specific audience. Understand user intent, pain points, and buying behavior.",
+  },
+  {
+    icon: <FaChartLine />,
+    title: "Data-Driven Decisions",
+    desc: "Track performance across channels and optimize continuously. Data removes guesswork from marketing.",
+  },
+  {
+    icon: <FaLightbulb />,
+    title: "Consistent Messaging",
+    desc: "Consistency across ads, website, and social platforms builds trust and long-term brand recall.",
+  },
+];
 
+const MarketingPage = () => {
   return (
-    <>
-      <Services
-        mode="modal"
-        onSelectService={(service) => setSelectedService(service)}
-      />
+    <section className="bg-linear-to-r to-orange-400 via-transparent from-black">
 
-      {/* MODAL */}
-      {selectedService && (
-        <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center px-4">
-          <div className="bg-white max-w-md w-full rounded-2xl p-6 relative">
-            <button
-              onClick={() => setSelectedService(null)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-black"
+      {/* ================= BANNER ================= */}
+<div className="relative h-[72vh] min-h-[500px] overflow-hidden">
+  {/* Banner Image */}
+  <img
+    src="/marketing desktop.jpg"
+    alt="Technologies Banner"
+    className="
+      absolute inset-0
+      w-full h-full
+      object-cover
+      hidden sm:block
+    "
+  />
+
+  {/* Mobile Image */}
+  <img
+    src="/marketing mobile .jpg"
+    alt="Technologies Banner Mobile"
+    className="
+      absolute inset-0
+      w-full h-full
+      object-cover
+      sm:hidden
+    "
+  />
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/45"></div>
+
+  {/* Optional Texture Overlay */}
+  <div className="absolute inset-0 opacity-10 bg-[url('/noise.png')] bg-repeat"></div>
+
+  {/* Content */}
+  <div className="relative h-full flex items-center justify-center text-center px-6">
+    <div className="max-w-4xl animate-fadeInUp">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+        Marketing That Drives Growth
+      </h1>
+      <p className="mt-6 text-lg text-gray-200">
+        Strategic marketing solutions designed to build visibility,
+              generate leads, and convert attention into revenue.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+      <DigitalServices />
+
+      {/* ================= WHAT WE RECOMMEND ================= */}
+      <div className="relative overflow-hidden">
+  {/* Animated Gradient Background */}
+  <div className="absolute inset-0 bg-gradient-to-br from-orange-200/40 via-white to-blue-200/40 animate-gradientMove"></div>
+
+  {/* Content */}
+  <div className="relative max-w-7xl mx-auto px-6 py-24">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+        What We Recommend
+      </h2>
+      <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
+        Our marketing approach focuses on long-term value, scalability,
+        and measurable business outcomes.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+      {recommendations.map((item, index) => (
+        <div
+          key={index}
+          className="
+            group
+            relative
+            rounded-2xl
+            p-8
+            bg-white/70
+            backdrop-blur-xl
+            border border-white/40
+            shadow-lg
+            transition-all
+            duration-500
+            hover:-translate-y-3
+            hover:scale-[1.03]
+          "
+        >
+          {/* Glow Effect */}
+          <div
+            className="
+              absolute
+              inset-0
+              rounded-2xl
+              opacity-0
+              group-hover:opacity-100
+              transition
+              duration-500
+              bg-gradient-to-r
+              from-orange-200/40
+              via-pink-200/30
+              to-blue-200/40
+              blur-xl
+            "
+          ></div>
+
+          <div className="relative z-10">
+            {/* Icon */}
+            <div
+              className="
+                text-orange-500
+                text-3xl
+                mb-5
+                transition-all
+                duration-200
+                group-hover:text-orange-600
+              "
             >
-              ✕
-            </button>
+              {item.icon}
+            </div>
 
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              {selectedService.title}
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">
+              {item.title}
             </h3>
 
             <p className="text-gray-600 leading-relaxed">
-              {selectedService.description}
+              {item.desc}
             </p>
           </div>
         </div>
-      )}
-      <DigitalServices />
-    </>
+      ))}
+    </div>
+  </div>
+</div>
+
+
+      {/* ================= OUR OPINION ================= */}
+      <div className="bg-white py-10">
+        <div className="max-w-6xl mx-auto px-6 text-center text-blakc">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-8">
+            Our Opinion on Marketing Your Product & Services
+          </h2>
+
+          <p className="text-black text-lg leading-relaxed max-w-4xl mx-auto mb-6">
+            Marketing is not about selling aggressively—it is about solving
+            problems clearly. Products don’t fail because they lack features;
+            they fail because customers don’t understand their value.
+          </p>
+
+          <p className="text-black text-lg leading-relaxed max-w-4xl mx-auto mb-6">
+            We advise businesses to focus on education-first marketing.
+            Explain how your product improves lives, saves time, or increases
+            efficiency. When customers understand the “why,” conversions follow naturally.
+          </p>
+
+          <p className="text-black text-lg leading-relaxed max-w-4xl mx-auto">
+            Sustainable growth comes from trust, consistency, and clarity.
+            Marketing should build relationships—not just traffic.
+          </p>
+        </div>
+      </div>
+
+    </section>
   );
 };
 
-export default ServicesPage;
+export default MarketingPage;

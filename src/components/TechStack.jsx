@@ -1,6 +1,6 @@
 const TechStack = () => {
   return (
-    <section className="bg-black/20 py-16 mb-17 px-4 sm:px-6 lg:px-20">
+    <section className="bg-black/20 py-10 mb-17 px-4 sm:px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
@@ -8,11 +8,11 @@ const TechStack = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black">
             Our <span className="text-orange-500">Tech Stack</span>
           </h2>
-          <p className="mt-4 text-black max-w-2xl mx-auto">
+          <p className="mt-4 text-black text-xl max-w-2xl mx-auto">
             Built with modern, scalable technologies to deliver high-performance,
             secure, and future-ready digital solutions.
           </p>
-        </div>
+        </div> 
 
         {/* Cards */}
         <div className="grid grid-cols-1  lg:grid-cols-2 gap-10">
@@ -26,7 +26,7 @@ const TechStack = () => {
               Frontend Excellence
             </h3>
 
-            <ul className="space-y-4">
+            <ul className="space-y-4 text-[16px]">
               {[
                 "React for dynamic user interfaces",
                 "HTML5 & CSS3 for modern layouts",
@@ -50,7 +50,7 @@ const TechStack = () => {
               Backend Power
             </h3>
 
-            <ul className="space-y-4">
+            <ul className="space-y-4 text-[16px]">
               {[
                 "Node.js for scalable server architecture",
                 "Express for robust API development",

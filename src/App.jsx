@@ -7,6 +7,9 @@ import Footer from "./components/Footer";
 import LandingPage from "./pages/LandingPage";
 import ContactPage from "./pages/ContactPage";
 import CTA from "./components/CTA";
+import NavSankalpBlog from "./components/NavSankalpBlog";
+import TechnologiesPage from "./pages/TechnologiesPage";
+import CareerPage from "./pages/CareersPage";
 
 const App = () => {
   return (
@@ -18,6 +21,9 @@ const App = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/navsankalp-blog" element={<NavSankalpBlog />} />
+        <Route path="/technologies" element={<TechnologiesPage />} />
+        <Route path="/career" element = {<CareerPage />} />
       </Routes>
       <CTA />
       <Footer />

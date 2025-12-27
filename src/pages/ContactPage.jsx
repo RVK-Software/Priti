@@ -2,10 +2,10 @@ import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const ContactSection = () => {
   return (
-    <section className="bg-gray-50 pt-36 pb-24">
+    <section className="bg-gray-50 pt-26 pb-16">
       <div className="max-w-7xl mx-auto px-6">
         {/* ================= CONNECT WITH US ================= */}
-        <div className="bg-linear-to-br from-black/40 via-black/90 to-orange-400 rounded-3xl px-6 py-20 mb-20">
+        <div className="bg-linear-to-br from-black/40 via-black/90 to-orange-400 rounded-3xl px-6 py-10 mb-20">
           <div className="text-center max-w-3xl mx-auto">
             <p className="text-orange-400 font-semibold tracking-widest mb-4">
               CONNECT WITH US

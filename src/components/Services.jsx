@@ -14,55 +14,55 @@ const services = [
     description:
       "Transforming business requirements into scalable, secure, and high-performance software solutions.",
     icon: <FaCode />,
-    image: "/Slide1.jpg",
+    image: "/web development.jpeg",
   },
   {
     title: "App Development",
     description:
       "Custom Android and iOS applications built for performance, scalability, and user experience.",
     icon: <FaMobileAlt />,
-    image: "/Slide2.jpg",
+    image: "/app development.jpeg",
   },
   {
     title: "Wordpress Web Development",
     description:
       "Modern, responsive, and SEO-friendly websites using the latest frontend technologies.",
     icon: <FaGlobe />,
-    image: "/Slide3.jpg",
+    image: "/Best WordPress Development Services Agency (1).jpeg",
   },
   {
     title: "E-Commerce",
     description:
       "Robust e-commerce platforms designed to maximize conversions and customer engagement.",
     icon: <FaShoppingCart />,
-    image: "/Slide2.jpg",
+    image: "/e-commerce.jpeg",
   },
   {
     title: "Custom Website Development",
     description:
       "Cloud-native architectures, migrations, and DevOps pipelines for reliable deployments.",
     icon: <FaCloud />,
-    image: "/Slide1.jpg",
+    image: "/customer website development.jpeg",
   },
   {
     title: "Software Development",
     description:
       "Custom CRM systems that streamline operations and enhance customer relationships.",
     icon: <FaCogs />,
-    image: "/Slide1.jpg",
+    image: "/software development.jpeg",
   },
 ];
 
 const Services = ({ mode = "redirect", onSelectService }) => {
   return (
-    <section className="bg-orange-50 pt-24 px-4">
-      <div className="max-w-7xl mx-auto pb-24">
+    <section className="bg-orange-50 pt-10 px-4">
+      <div className="max-w-7xl mx-auto pb-10">
         {/* HEADING */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
             Key Areas of Our Expertise
           </h2>
-          <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
+          <p className="mt-4 text-gray-600 text-xl max-w-3xl mx-auto">
             We help businesses build modern digital products using cutting-edge
             technologies and proven engineering practices.
           </p>
@@ -82,7 +82,7 @@ const Services = ({ mode = "redirect", onSelectService }) => {
                 className="absolute inset-0 w-full h-full object-cover
                            group-hover:scale-110 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-black/60"></div>
+              <div className="absolute inset-0 bg-black/40"></div>
 
               {/* DARK OVERLAY */}
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent"></div>
@@ -101,7 +101,7 @@ const Services = ({ mode = "redirect", onSelectService }) => {
                 {/* CTA */}
                 {mode === "redirect" ? (
                   <Link
-                    to="/services"
+                    to="/technologies"
                     className="mt-4 inline-block text-sm font-medium text-orange-400
                                group-hover:translate-x-1 transition"
                   >
@@ -109,7 +109,9 @@ const Services = ({ mode = "redirect", onSelectService }) => {
                   </Link>
                 ) : (
                   <button
-                    onClick={() => onSelectService(service)}
+                    onClick={() =>
+                      onSelectService && onSelectService(service)
+                    }
                     className="mt-4 text-sm font-medium text-orange-400
                                group-hover:translate-x-1 transition text-left"
                   >
