@@ -83,9 +83,9 @@ const TechnologiesPage = () => {
       />
 
       {/* ================= TECHNOLOGY STACK ================= */}
-      <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="text-center mb-14">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+      <div className="max-w-7xl mx-auto px-3 py-6">
+        <div className="text-center mb-4">
+          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
             Our Technology Capabilities
           </h2>
           <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
@@ -121,12 +121,12 @@ const TechnologiesPage = () => {
       </div>
 
       {/* ================= OUR VIEW ================= */}
-      <div className="bg-black py-20 relative overflow-hidden">
+      <div className="bg-black py-8 relative overflow-hidden">
         <div className="absolute -top-20 -left-20 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
 
-        <div className="relative max-w-6xl mx-auto px-6 text-center text-white">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-8">
+        <div className="relative max-w-6xl mx-auto px-3 text-center text-white">
+          <h2 className="text-2xl lg:text-3xl font-bold mb-8">
             Our View on Technology
           </h2>
 

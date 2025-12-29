@@ -83,12 +83,12 @@ const MarketingPage = () => {
   <div className="absolute inset-0 bg-gradient-to-br from-orange-200/40 via-white to-blue-200/40 animate-gradientMove"></div>
 
   {/* Content */}
-  <div className="relative max-w-7xl mx-auto px-6 py-24">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+  <div className="relative max-w-7xl mx-auto px-4 py-8">
+    <div className="text-center mb-8">
+      <h2 className="text-[28px] lg:text-4xl font-bold text-gray-900">
         What We Recommend
       </h2>
-      <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
+      <p className="mt-4 text-gray-600 max-w-4xl mx-auto">
         Our marketing approach focuses on long-term value, scalability,
         and measurable business outcomes.
       </p>
@@ -102,7 +102,7 @@ const MarketingPage = () => {
             group
             relative
             rounded-2xl
-            p-8
+            p-6
             bg-white/70
             backdrop-blur-xl
             border border-white/40

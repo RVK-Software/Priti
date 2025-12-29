@@ -43,16 +43,16 @@ const coreValues = [
 
 const CoreValues = () => {
   return (
-    <section className="bg-black py-10 px-6">
+    <section className="bg-black py-6 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* HEADER */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-8">
           
           <h2 className="text-3xl md:text-4xl font-bold text-white">
             Our Core Values
           </h2>
-          <p className="mt-4 text-gray-400 text-[16px] max-w-3xl mx-auto">
+          <p className="mt-3 text-gray-400 text-[16px] max-w-3xl mx-auto">
             Integrity, transparency, teamwork, accountability, and innovation
             form the foundation of RVK Software.
           </p>

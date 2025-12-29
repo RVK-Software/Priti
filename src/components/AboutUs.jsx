@@ -4,22 +4,23 @@ import { Link } from "react-router-dom";
 const AboutUs = ({ showButton = true }) => {
   return (
     <section className="bg-gray-50 py-6">
-      <div className="max-w-7xl mx-auto py-2 px-2">
-        <div className="grid lg:grid-cols-[60%_40%] gap-8 items-center">
+      <div className="mx-auto lg:px-12 px-2 py-2">
+        <div className="grid lg:grid-cols-[60%_40%] gap-8 items-center justify-around">
           
           {/* CONTENT SECTION */}
-          <div className="space-y-10 px-4 sm:px-6 lg:px-0">
-            <h2 className="text-3xl text-center lg:text-5xl font-bold text-gray-800 leading-snug">
+          <div className="space-y-10 px-4 sm:px-6  lg:px-0">
+            <h2 className="text-[24px] text-start lg:text-5xl font-bold text-gray-800 leading-snug">
               Welcome to <span className="text-orange-400">RVK Software</span>
             </h2>
 
-            <p className="text-gray-600 text-xl leading-relaxed">
-              We are a technology-driven software company focused on building
-              scalable, secure, and high-performance digital solutions for
-              modern businesses.
+            <p className="text-gray-600 text-[18px] leading-relaxed">
+             We are a technology-driven software company committed to innovation and excellence.  
+Our focus is on building scalable, secure, and high-performance digital solutions that empower modern businesses.  
+By leveraging cutting-edge technologies, we help companies optimize operations, enhance user experiences, and drive growth.  
+
             </p>
 
-            <ul className="grid sm:grid-cols-2 text-xl gap-6 mt-6">
+            <ul className="grid sm:grid-cols-2 text-[18px] gap-6 mt-6">
               {[
                 "Industry-standard development practices",
                 "Experienced engineering team",

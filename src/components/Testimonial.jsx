@@ -37,9 +37,9 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="relative bg-black/5 py-12 overflow-hidden">
+    <section className="relative bg-black/5 py-6 overflow-hidden">
       {/* BACKGROUND GLOW */}
-      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-orange-500/10 blur-[120px]" />
+      <div className="absolute  left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-orange-500/10 blur-[120px]" />
 
       <div className="relative max-w-6xl mx-auto px-6">
         {/* HEADER */}
@@ -47,7 +47,7 @@ const Testimonials = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-black">
             What Our <span className="text-orange-500">Clients Say</span>
           </h2>
-          <p className="mt-4 text-black-400 max-w-2xl mx-auto">
+          <p className="mt-3 text-black-400 max-w-4xl mx-auto">
             Trusted by startups and enterprises for delivering reliable,
             scalable, and high-quality digital solutions.
           </p>
@@ -59,7 +59,7 @@ const Testimonials = () => {
             className="relative mx-auto max-w-3xl
                        bg-white/5 backdrop-blur-lg
                        border border-white/10
-                       rounded-3xl p-8 sm:p-10
+                       rounded-3xl p-8 sm:p-6
                        shadow-[0_30px_80px_rgba(0,0,0,0.6)]
                        transition-all duration-500"
           >
@@ -67,7 +67,7 @@ const Testimonials = () => {
             <FaQuoteLeft className="text-orange-500 text-3xl mb-6 opacity-80" />
 
             {/* FEEDBACK */}
-            <p className="text-lg sm:text-xl text-black leading-relaxed mb-8">
+            <p className="text-[16px] sm:text-[18px] text-black leading-relaxed mb-8">
               “{testimonials[active].feedback}”
             </p>
 

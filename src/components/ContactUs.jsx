@@ -5,10 +5,10 @@ const ContactSection = () => {
   return (
     <div className="bg-white shadow-xl rounded-2xl grid lg:grid-cols-2 overflow-hidden">
       {/* LEFT CONTENT */}
-      <div className="bg-[#0f172a] text-white p-10 flex flex-col justify-between">
+      <div className="bg-[#0f172a] text-white p-8 flex flex-col justify-between">
         <div>
-          <h2 className="text-3xl font-bold mb-2">Get in Touch</h2>
-          <p className="text-gray-300 mb-8 leading-relaxed">
+          <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
+          <p className="text-gray-300 mb-4 leading-relaxed">
             We help businesses build scalable, secure, and high-performance
             software solutions. Reach out to us and let’s discuss your idea.
           </p>

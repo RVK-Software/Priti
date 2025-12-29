@@ -50,10 +50,10 @@ const Navsankalp = () => {
                          bg-clip-text text-transparent
                          bg-linear-to-r from-white to-orange-600 mb-4"
             >
-              Navsankalp
+              Navsankalp App
             </h2>
 
-            <p className="text-gray-300 text-xl max-w-xl">
+            <p className="text-black-600 text-[30px] font-bold max-w-auto">
               Dil Se Dhundho, Yahi Milega
             </p>
           </div>

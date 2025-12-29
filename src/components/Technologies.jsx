@@ -55,14 +55,14 @@ const services = [
 
 const Services = ({ mode = "redirect", onSelectService }) => {
   return (
-    <section className="bg-orange-50 pt-10 px-4">
-      <div className="max-w-7xl mx-auto pb-10">
+    <section className="bg-orange-50 pt-6 px-4">
+      <div className="max-w-7xl mx-auto pb-8">
         {/* HEADING */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
-            Key Areas of Our Expertise
+        <div className="text-center mb-6">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
+            Key Areas of Our Tech Stack
           </h2>
-          <p className="mt-4 text-gray-600 text-xl max-w-3xl mx-auto">
+          <p className="mt-2 text-gray-600 text-[16px] max-w-3xl mx-auto">
             We help businesses build modern digital products using cutting-edge
             technologies and proven engineering practices.
           </p>

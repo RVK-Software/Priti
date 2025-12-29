@@ -4,22 +4,23 @@ const partners = [
   "/Partner3.jpeg",
   "/Partner4.jpeg",
   "/Partner5.jpeg",
+  "/Partner6.jpeg",
 ];
 
 const PartnersMarquee = () => {
   return (
-    <section className="bg-black py-20 overflow-hidden relative">
+    <section className="bg-black py-8 overflow-hidden relative">
       {/* ORANGE GLOW */}
       <div className="absolute -top-24 right-0 w-80 h-80 bg-orange-500/20 rounded-full blur-3xl" />
       <div className="absolute -bottom-24 left-0 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4">
+      <div className="relative z-10 max-w-7xl mx-auto px-2">
         {/* HEADER */}
         <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-white">
             Our <span className="text-orange-500">Trusted Partners</span>
           </h2>
-          <p className="mt-4 text-white text-xl max-w-3xl mx-auto">
+          <p className="mt-4 text-white text-xl max-w-5xl mx-auto">
             We collaborate with forward-thinking organizations to deliver
             scalable, high-impact digital solutions.
           </p>

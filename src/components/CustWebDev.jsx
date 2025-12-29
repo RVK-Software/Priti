@@ -33,12 +33,12 @@ const services = [
 
 const CustWebDev = () => {
   return (
-    <section className="bg-white py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section className="bg-white py-6">
+      <div className="max-w-7xl mx-auto px-2 sm:px-2">
         {/* Heading */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-6">
           
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-3xl sm:text-xl max-w-5xl lg:text-5xl font-bold text-gray-900 leading-tight">
             Customized Web Development Services 
           </h2>
         </div>

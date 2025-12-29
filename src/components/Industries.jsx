@@ -29,12 +29,12 @@ const industries = [
 
 const Industries = () => {
   return (
-    <section className="bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-gray-50 py-6">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* LEFT CONTENT */}
           <div>
-            <span className="inline-block mb-4 px-4 py-1 text-sm font-semibold text-orange-500 bg-orange-100 rounded-full">
+            <span className="inline-block mb-4 px-4 py-1 text-xl font-semibold text-orange-500 bg-orange-100 rounded-xl">
               Industries We Serve
             </span>
 
