@@ -55,11 +55,13 @@ const Navbar = () => {
       <header className="fixed w-full bg-gray-200 shadow-md z-40 lg:top-11 top-8">
         <div className="max-w-7xl mx-auto px-6 h-18 flex items-center justify-between">
           {/* LOGO */}
-          <img
-            src="/RVK-LOGO1.png"
-            alt="RVK Software"
-            className="h-12 object-contain"
-          />
+          <Link to="/" aria-label="Go to Home">
+            <img
+              src="/RVK-LOGO1.png"
+              alt="RVK Software"
+              className="h-12 object-contain cursor-pointer"
+            />
+          </Link>
 
           {/* DESKTOP MENU */}
           <nav className="hidden lg:flex gap-8 font-medium">
@@ -133,7 +135,6 @@ const Navbar = () => {
             <Link to="/contact" className="hover:text-orange-400">
               Contact Us
             </Link>
-
           </nav>
 
           {/* MOBILE MENU BUTTON */}
@@ -191,10 +192,7 @@ const Navbar = () => {
                 <ul className="mt-3 space-y-3 text-sm pl-4 text-gray-700">
                   {servicesMenu.map((item) => (
                     <li key={item.label}>
-                      <Link
-                        to="/services"
-                        onClick={() => setMenuOpen(false)}
-                      >
+                      <Link to="/services" onClick={() => setMenuOpen(false)}>
                         {item.label}
                       </Link>
                     </li>
@@ -216,10 +214,7 @@ const Navbar = () => {
                 <ul className="mt-3 space-y-3 text-sm pl-4 text-gray-700">
                   {technologiesMenu.map((item) => (
                     <li key={item.path}>
-                      <Link
-                        to={item.path}
-                        onClick={() => setMenuOpen(false)}
-                      >
+                      <Link to={item.path} onClick={() => setMenuOpen(false)}>
                         {item.label}
                       </Link>
                     </li>
