@@ -59,7 +59,7 @@ const Navsankalp = () => {
           </div>
 
           {/* CARDS */}
-          <div className="grid grid-cols-1 text-xl lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 text-[16px] lg:grid-cols-2 gap-8">
             {industries.map((item, index) => (
               <div
                 key={index}

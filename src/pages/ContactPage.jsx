@@ -97,7 +97,7 @@ const ContactSection = () => {
           </div>
 
           {/* RIGHT FORM */}
-          <div className="p-10">
+          <div className="p-5">
             <h3 className="text-2xl font-semibold text-gray-800 mb-6">
               Send Us a Message
             </h3>
@@ -109,6 +109,15 @@ const ContactSection = () => {
                 </label>
                 <input
                   type="text"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Contact Number
+                </label>
+                <input
+                  type="tel"
                   className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
                 />
               </div>

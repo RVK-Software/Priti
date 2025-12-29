@@ -52,7 +52,7 @@ const CoreValues = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white">
             Our Core Values
           </h2>
-          <p className="mt-4 text-gray-400 text-xl max-w-3xl mx-auto">
+          <p className="mt-4 text-gray-400 text-[16px] max-w-3xl mx-auto">
             Integrity, transparency, teamwork, accountability, and innovation
             form the foundation of RVK Software.
           </p>
@@ -97,7 +97,7 @@ const CoreValues = () => {
     <h3 className="text-xl font-semibold text-white mb-2">
       {item.title}
     </h3>
-    <p className="text-gray-400 text-[18px] leading-relaxed">
+    <p className="text-gray-400 text-[16px] leading-relaxed">
       {item.desc}
     </p>
   </div>

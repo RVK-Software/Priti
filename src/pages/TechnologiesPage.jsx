@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   FaCode,
   FaCloud,
@@ -6,7 +7,7 @@ import {
   FaCogs,
   FaShieldAlt,
 } from "react-icons/fa";
-import Services from "../components/Services";
+import Services from "../components/Technologies";
 
 const technologies = [
   {
@@ -42,56 +43,44 @@ const technologies = [
 ];
 
 const TechnologiesPage = () => {
+  const [selectedService, setSelectedService] = useState(null);
+
   return (
     <section className="bg-gray-50 overflow-hidden">
-     
-{/* ================= BANNER ================= */}
-<div className="relative h-[72vh] min-h-[500px] overflow-hidden">
-  {/* Banner Image */}
-  <img
-    src="/technologies desktop.jpg"
-    alt="Technologies Banner"
-    className="
-      absolute inset-0
-      w-full h-full
-      object-cover
-      hidden sm:block
-    "
-  />
+      {/* ================= BANNER ================= */}
+      <div className="relative h-[72vh] min-h-[500px] overflow-hidden">
+        <img
+          src="/technologies desktop.jpg"
+          alt="Technologies Banner"
+          className="absolute inset-0 w-full h-full object-cover hidden sm:block"
+        />
 
-  {/* Mobile Image */}
-  <img
-    src="/technologies mobile.jpg"
-    alt="Technologies Banner Mobile"
-    className="
-      absolute inset-0
-      w-full h-full
-      object-cover
-      sm:hidden
-    "
-  />
+        <img
+          src="/technologies mobile.jpg"
+          alt="Technologies Banner Mobile"
+          className="absolute inset-0 w-full h-full object-cover sm:hidden"
+        />
 
-  {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/55"></div>
+        <div className="absolute inset-0 bg-black/55"></div>
 
- 
+        <div className="relative h-full flex items-center justify-center text-center px-6">
+          <div className="max-w-4xl animate-fadeInUp">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+              Technologies That Power the Future
+            </h1>
+            <p className="mt-6 text-lg text-gray-200">
+              We build secure, scalable, and future-ready technology solutions
+              using modern tools and proven engineering practices.
+            </p>
+          </div>
+        </div>
+      </div>
 
-  {/* Content */}
-  <div className="relative h-full flex items-center justify-center text-center px-6">
-    <div className="max-w-4xl animate-fadeInUp">
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-        Technologies That Power the Future
-      </h1>
-      <p className="mt-6 text-lg text-gray-200">
-        We build secure, scalable, and future-ready technology solutions
-        using modern tools and proven engineering practices.
-      </p>
-    </div>
-  </div>
-</div>
-
-
-      < Services />
+      {/* ================= SERVICES ================= */}
+      <Services
+        mode="modal"
+        onSelectService={(service) => setSelectedService(service)}
+      />
 
       {/* ================= TECHNOLOGY STACK ================= */}
       <div className="max-w-7xl mx-auto px-6 py-20">
@@ -109,49 +98,12 @@ const TechnologiesPage = () => {
           {technologies.map((item, index) => (
             <div
               key={index}
-              className="
-                group
-                relative
-                bg-white
-                rounded-2xl
-                p-8
-                shadow-md
-                transition-all
-                duration-500
-                hover:-translate-y-3
-                hover:shadow-[0_20px_50px_rgba(255,115,0,0.35)]
-              "
+              className="group relative bg-white rounded-2xl p-8 shadow-md transition-all duration-500 hover:-translate-y-3"
             >
-              {/* Glow Border */}
-             <div
-                className="
-                  absolute
-                  inset-0
-                  rounded-2xl
-                  opacity-0
-                  group-hover:opacity-100
-                  transition
-                  duration-500
-                  bg-gradient-to-r
-                  from-orange-300/30
-                  via-transparent
-                  to-gray-300
-                  blur-xl
-                "
-              ></div>
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur-xl"></div>
 
               <div className="relative z-10">
-                <div
-                  className="
-                    text-orange-500
-                    text-3xl
-                    mb-4
-                    transition-transform
-                    duration-500
-                    group-hover:scale-125
-                    group-hover:rotate-6
-                  "
-                >
+                <div className="text-orange-500 text-3xl mb-4 transition-transform duration-500 ">
                   {item.icon}
                 </div>
 
@@ -170,7 +122,6 @@ const TechnologiesPage = () => {
 
       {/* ================= OUR VIEW ================= */}
       <div className="bg-black py-20 relative overflow-hidden">
-        {/* Animated Glow */}
         <div className="absolute -top-20 -left-20 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
 
@@ -196,6 +147,31 @@ const TechnologiesPage = () => {
         </div>
       </div>
 
+      {/* ================= SERVICE MODAL ================= */}
+      {selectedService && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4">
+          <div className="bg-white max-w-lg w-full rounded-2xl shadow-2xl p-8 relative animate-fadeInUp">
+            <button
+              onClick={() => setSelectedService(null)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-black text-xl"
+            >
+              ✕
+            </button>
+
+            <div className="text-orange-500 text-4xl mb-4">
+              {selectedService.icon}
+            </div>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+              {selectedService.title}
+            </h3>
+
+            <p className="text-gray-600 leading-relaxed">
+              {selectedService.description}
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

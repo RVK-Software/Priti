@@ -1,36 +1,32 @@
+import { Link } from "react-router-dom";
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
-  FaMapMarkerAlt,
-  FaPhoneAlt,
-  
 } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-linear-to-t from-black/70  via-orange-300 to-white text-black">
+    <footer className="bg-linear-to-t from-black/70 via-orange-300 to-white text-black">
       {/* MAIN FOOTER */}
       <div className="max-w-7xl mx-auto px-6 py-10">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-          
+
           {/* COMPANY INFO */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
+            <Link to="/" className="inline-block">
               <img
                 src="/RVK-LOGO1.png"
                 alt="Company Logo"
                 className="w-34 h-21"
               />
-            </div>
+            </Link>
 
             <p className="text-[16px] text-black">
               The Heritage Smile of Rajasthan. Providing ethical,
               professional, and advanced IT solutions with compassion.
             </p>
-
-            
           </div>
 
           {/* SERVICES */}
@@ -39,13 +35,32 @@ const Footer = () => {
               Our Services
             </h3>
 
-            <ul className="space-y-2 text-sm text-black">
-              <li>Web Development</li>
-              <li>Web Designing</li>
-              <li>Digital marketing</li>
-              <li>Graphic Designing</li>
-              <li>Business listing</li>
-             
+            <ul className="space-y-2 text-[16px] text-black">
+              <li>
+                <Link to="/technologies" className="hover:text-orange-500 transition">
+                  Web Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/technologies" className="hover:text-orange-500 transition">
+                  App Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/technologies" className="hover:text-orange-500 transition">
+                  Digital Marketing
+                </Link>
+              </li>
+              <li>
+                <Link to="/technologies" className="hover:text-orange-500 transition">
+                  Graphic Designing
+                </Link>
+              </li>
+              <li>
+                <Link to="/technologies" className="hover:text-orange-500 transition">
+                  Software Development
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -55,9 +70,30 @@ const Footer = () => {
               Quick Links
             </h3>
 
-            <ul className="space-y-2 text-sm text-black">
-              <li>About Us</li>
-              <li>Contact Us</li>
+            <ul className="space-y-2 text-[16px] text-black">
+              <li>
+                <Link to="/about" className="hover:text-orange-500 transition">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-orange-500 transition">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/career" className="hover:text-orange-500 transition">
+                  Career
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/navsankalp-blog"
+                  className="hover:text-orange-500 transition"
+                >
+                  Blogs
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -97,14 +133,14 @@ const Footer = () => {
               </a>
             </div>
           </div>
+
         </div>
       </div>
 
       {/* COPYRIGHT BAR */}
       <div className="border-t border-white/20">
-        <div className="max-w-7xl mx-auto px-6 py-4 text-center text-sm text-white">
-          ©{new Date().getFullYear()}{" "}
-          Developed & Maintained by{" "}
+        <div className="max-w-7xl mx-auto px-6 py-4 text-center text-[16px] text-white">
+          ©{new Date().getFullYear()} Developed & Maintained by{" "}
           <span className="font-semibold text-orange-600">
             RVK Software
           </span>

@@ -1,6 +1,6 @@
 import Home from "../components/Hero";
 import AboutUs from "../components/AboutUs";
-import Services from "../components/Services";
+import Services from "../components/Technologies";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CustWebDev from "../components/CustWebDev";
