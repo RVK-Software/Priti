@@ -46,7 +46,7 @@ const CareerPage = () => {
     <section className="bg-gray-50 overflow-hidden">
 
       {/* ================= WHY JOIN RVK ================= */}
-      <div className="relative py-20 bg-black text-white overflow-hidden">
+      <div className="relative pt-20 pb-10 bg-black text-white overflow-hidden">
         {/* Glow */}
         <div className="absolute -top-20 -left-20 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -56,7 +56,7 @@ const CareerPage = () => {
             <h1 className="text-3xl lg:text-4xl font-bold">
               Why Join RVK
             </h1>
-            <p className="mt-4 text-gray-300 max-w-3xl mx-auto text-lg">
+            <p className="mt-4 text-gray-300 max-w-5xl mx-auto text-lg">
               At RVK, we don’t just build software — we build careers,
               confidence, and long-term professional growth.
             </p>
@@ -102,13 +102,13 @@ const CareerPage = () => {
       </div>
 
       {/* ================= OPEN POSITIONS ================= */}
-      <div className="py-20">
+      <div className="py-8">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
               Open Positions
             </h2>
-            <p className="mt-4 text-gray-600 max-w-3xl mx-auto text-lg">
+            <p className="mt-4 text-gray-600 max-w-5xl mx-auto text-lg">
               We’re looking for passionate individuals who want to grow,
               learn, and build impactful digital solutions.
             </p>

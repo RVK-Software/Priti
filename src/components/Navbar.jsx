@@ -43,17 +43,17 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between">
           <div className="flex items-center gap-2">
             <FaPhoneAlt className="text-orange-400" />
-            <span className="text-[15px] lg:text-[16px]">+91 90240 9959</span>
+            <span className="text-[14px] lg:text-[16px]">+91 90240 9959</span>
           </div>
           <div className="flex items-center gap-2">
             <FaMapMarkerAlt className="text-orange-400" />
-            <span className="text-[15px] lg:text-[16px]">Jaipur, Rajasthan</span>
+            <span className="text-[14px] lg:text-[16px]">Jaipur, Rajasthan</span>
           </div>
         </div>
       </div>
 
       {/* NAVBAR */}
-      <header className="fixed w-full bg-gray-200 shadow-md z-40 lg:top-10 top-9">
+      <header className="fixed w-full bg-gray-200 shadow-md z-40 lg:top-9 top-9">
         <div className="max-w-7xl mx-auto px-3 h-17 flex items-center justify-between">
           {/* LOGO */}
           <Link to="/" aria-label="Go to Home">

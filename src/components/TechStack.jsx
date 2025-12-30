@@ -8,7 +8,7 @@ const TechStack = () => {
           <h2 className="text-3xl sm:text-3xl lg:text-5xl font-bold text-black">
             Strategic Power for <span className="text-orange-500">Modern Businesses</span>
           </h2>
-          <p className="mt-2 text-black text-[20px] max-w-auto mx-auto">
+          <p className="mt-2 text-black text-[16px] sm:text-[25px] max-w-auto mx-auto">
             Built with modern, scalable technologies to deliver high-performance,
             secure, and future-ready digital solutions.
           </p>

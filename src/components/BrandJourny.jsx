@@ -39,40 +39,72 @@ const journeySteps = [
 
 const BrandJourney = () => {
   return (
-    <section className="bg-white py-12">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="relative bg-black/80 py-6 overflow-hidden">
+      {/* soft corner gradients */}
+      <div className="absolute -top-28 -right-15 w-90 h-90 bg-orange-300 rounded-full blur-3xl opacity-60" />
+      <div className="absolute top-44 left-15 w-96 h-90 bg-linear-to-r from-orange-500 via-orange-400 to-orange-500 rounded-full blur-3xl opacity-60" />
+      <div className="absolute bottom-24 -left-44 w-90 h-80 bg-orange-300 rounded-full blur-3xl opacity-60" />
+      <div className="absolute bottom-84 right-44 w-90 h-80 bg-linear-to-r from-orange-500 via-orange-400 to-orange-500 rounded-full blur-3xl opacity-60" />
+
+      <div className="relative max-w-7xl mx-auto px-6">
         {/* HEADER */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+        <div className="text-center mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-white">
             Your Brand Journey
           </h2>
-          <p className="mt-4 text-gray-600">
-            End-to-end branding solutions designed for visibility, trust, and sustainable growth.
+          <p className="mt-3 text-[14px] sm:text-xl text-white max-w-4xl mx-auto">
+            A structured path from research to recognition — designed for
+            sustainable growth.
           </p>
         </div>
 
-        {/* STEPS GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {journeySteps.map((item, index) => (
-            <div
-              key={index}
-              className="flex items-start space-x-4 bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition"
-            >
-              {/* POINT / DOT */}
-              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 mt-1"></div>
+        {/* TIMELINE */}
+        <div className="relative">
+          {/* MOBILE LINE */}
+          <div className="absolute left-1 top-0 h-full w-px bg-gray-200 md:hidden" />
 
-              {/* CONTENT */}
-              <div>
-                <span className="text-orange-500 font-semibold text-sm">
-                  {item.step}
-                </span>
-                <h3 className="text-xl font-semibold text-gray-900 mt-1">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-gray-600">{item.description}</p>
-              </div>
-            </div>
-          ))}
+          {/* DESKTOP LINE */}
+          <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-gray-200" />
+
+          <div className="space-y-4">
+            {journeySteps.map((item, index) => {
+              const isEven = index % 2 === 0;
+
+              return (
+                <div
+                  key={index}
+                  className={`relative md:grid md:grid-cols-2 md:gap-8 items-start`}
+                >
+                  {/* DOT */}
+                  <div
+                    className={`absolute top-2 w-4 h-4 rounded-full bg-gradient-to-r from-orange-400 to-orange-600
+                      ${isEven ? "md:left-1/2" : "md:left-1/2"}
+                      left-2 transform -translate-x-1/2`}
+                  />
+
+                  {/* CONTENT */}
+                  <div
+                    className={`pl-2 md:pl-0
+                       ${
+                        isEven
+                    ? "md:col-start-1 md:text-right md:mt-0"
+        : "md:col-start-2 md:-mt-0"
+    }`}
+                  >
+                    <div className="inline-block bg-gray-50 p-4 rounded-xl shadow-sm hover:shadow-md transition max-w-md">
+                      <span className="text-orange-500 font-semibold text-sm">
+                        {item.step}
+                      </span>
+                      <h3 className="text-xl font-semibold text-gray-900 mt-1">
+                        {item.title}
+                      </h3>
+                      <p className="mt-2 text-gray-600">{item.description}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
@@ -80,8 +112,3 @@ const BrandJourney = () => {
 };
 
 export default BrandJourney;
-
-
-
-
-

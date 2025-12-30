@@ -31,7 +31,7 @@ const Industries = () => {
   return (
     <section className="bg-gray-50 py-6">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* LEFT CONTENT */}
           <div>
             <span className="inline-block mb-4 px-4 py-1 text-xl font-semibold text-orange-500 bg-orange-100 rounded-xl">
@@ -64,7 +64,7 @@ const Industries = () => {
             </ul>
 
             <Link to="/contact">
-              <button className="inline-flex items-center justify-center px-8 py-4 bg-orange-500 text-white font-semibold rounded-xl shadow-lg hover:bg-orange-600 transition">
+              <button className="inline-flex items-center justify-center px-6 py-4 bg-orange-500 text-white font-semibold rounded-xl shadow-lg hover:bg-orange-600 transition">
                 Discuss Your Industry
               </button>
             </Link>

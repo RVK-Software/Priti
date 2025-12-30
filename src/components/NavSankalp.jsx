@@ -29,8 +29,8 @@ const Navsankalp = () => {
     <section
       className="
         relative
-        px-4 sm:px-6 lg:px-8
-        py-10
+        px-3 sm:px-6 lg:px-8
+        py-6
         min-h-[70vh] sm:min-h-[80vh] lg:min-h-[90vh]
         bg-[url('/NavSankalp.jpg')]
         bg-cover
@@ -42,18 +42,18 @@ const Navsankalp = () => {
       <div className="absolute inset-0 bg-black/50"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 gap-12 items-center">
+        <div className="grid grid-cols-1 gap-6 items-center">
           {/* CONTENT */}
           <div className="flex flex-col items-center text-center">
             <h2
               className="text-3xl sm:text-4xl lg:text-5xl font-bold
                          bg-clip-text text-transparent
-                         bg-linear-to-r from-white to-orange-600 mb-4"
+                         bg-linear-to-r from-white to-orange-600 mb-3"
             >
               Navsankalp App
             </h2>
 
-            <p className="text-black-600 text-[30px] font-bold max-w-auto">
+            <p className="text-black-600 text-[20px] sm:text-[35px] font-bold max-w-auto">
               Dil Se Dhundho, Yahi Milega
             </p>
           </div>
