@@ -13,7 +13,7 @@ const CTA = () => {
     <section className="p-6 mb-4">
       <div className="max-w-7xl mx-auto">
         <div className="relative bg-black rounded-3xl overflow-hidden">
-          <div className="grid lg:grid-cols-2 gap-3 items-center p-4 px-8">
+          <div className="grid lg:grid-cols-2 gap-3 items-center p-4 px-4">
             
             {/* LEFT CONTENT */}
             <div className="text-white z-10">
@@ -38,7 +38,7 @@ const CTA = () => {
               <img
                 src="/CTA-image.jpg"
                 alt="App Screen"
-                className="w-full h-[380px] rounded-2xl object-contain"
+                className="w-full h-[280px] rounded-2xl object-contain"
               />
             </div>
 

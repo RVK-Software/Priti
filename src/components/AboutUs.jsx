@@ -14,20 +14,18 @@ const AboutUs = ({ showButton = true }) => {
             </h2>
 
             <p className="text-gray-600 text-[18px] leading-relaxed">
-             We are a technology-driven software company committed to innovation and excellence.  
-Our focus is on building scalable, secure, and high-performance digital solutions that empower modern businesses.  
-By leveraging cutting-edge technologies, we help companies optimize operations, enhance user experiences, and drive growth.  
-
+             We are a technology-driven digital agency committed to innovation and engineering excellence. We specialize in building scalable, secure software and executing data-driven digital marketing strategies that empower modern businesses. By integrating cutting-edge technologies with performance marketing, we help brands optimize operations, enhance User Experience (UX), and drive measurable ROI-focused growth.  
             </p>
+            <p className="text-[20px] font-semibold">Our Core Pillars of Digital Excellence</p>
 
             <ul className="grid sm:grid-cols-2 text-[18px] gap-6 mt-6">
               {[
-                "Industry-standard development practices",
-                "Experienced engineering team",
-                "Scalable and secure solutions",
-                "Client-centric approach",
-                "Quality-driven delivery",
-                "Transparent and ethical processes",
+                "Standardized Agile Development",
+                "Full-Stack Engineering & Marketing Experts",
+                "Scalable & Secure Infrastructure",
+                "Client-Centric Growth Strategy",
+                "Quality-Driven Delivery & Performance",
+                "Transparent & Ethical Processes",
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <FaCheck className="text-orange-400 mt-1 text-sm" />

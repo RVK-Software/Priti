@@ -3,20 +3,20 @@ import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const testimonials = [
   {
-    name: "Amit Verma",
-    role: "Founder, GrowthX",
+    name: "Dr Dinesh Chandak",
+    role: "Fouder Of Khushi Child Care Clinic",
     feedback:
       "RVK Software delivered exactly what we needed — scalable architecture, clean UI, and a team that truly understands business goals.",
   },
   {
-    name: "Neha Sharma",
-    role: "Product Manager, FinEdge",
+    name: "Mr Vinod Sharma",
+    role: "Founder Hariom Electric Motors",
     feedback:
       "Their engineering quality and communication are outstanding. RVK feels less like a vendor and more like a long-term partner.",
   },
   {
-    name: "Rohit Mehta",
-    role: "CTO, CloudNova",
+    name: "Dr SK Meena",
+    role: "Founder & Director Of SR Hospital",
     feedback:
       "From planning to execution, the RVK team showed deep technical expertise and a strong commitment to timelines.",
   },

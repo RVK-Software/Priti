@@ -4,29 +4,29 @@ const services = [
   {
     title: "Website Design & Development",
     description:
-      "We don't just build websites; we create user experiences that engage and convert. Our designers and developers will collaborate to bring your vision to life with a stunning, functional website.",
-    tags: ["Custom Design", "Responsive Layout", "Unique Theme", "Component Based Architecture"],
+      "We go beyond standard web development to engineer immersive digital experiences that drive engagement and ROI. Our multidisciplinary team fuses high-level design with robust code to transform your vision into a high-performance digital asset.",
+    tags: ["Bespoke UI/UX Design", "Responsive Cross-Platform Layouts", "Exclusive Brand-Centric Themes", "Modular, Component-Based Architecture"],
   },
   {
     title: "SEO Friendly Websites",
     description:
-      "Empower yourself to easily update and manage your website content with a user-friendly CMS. We'll choose the perfect platform based on your needs, whether it's WordPress, Drupal, or a custom solution.",
+      "SEO-Optimized Architecture Deploy high-performance websites engineered with user-centric CMS frameworks. From industry leaders like WordPress and Drupal to bespoke custom engines, we deliver complete content autonomy tailored to your technical requirements.",
     tags: [
-      "Fast Website Speed",
-      "High Quality & Useful Content Not Copied",
-      "Higher Conversion Rate",
-      "Better User Experience",
+      "Performance-First Load Speeds",
+      "Original, High-Authority Content",
+      "Conversion-Optimized Workflows",
+      "Superior UX/UI Design",
     ],
   },
   {
     title: "Other Services We Offer",
     description:
-      "Connect your web application to external data sources and services with our expert API development and integration. This allows for a more powerful and dynamic user experience.",
+      "Advanced Integration & Support Ecosystem Expand your platform’s capabilities through expert API development and seamless third-party integrations, creating a dynamic and interconnected user environment.",
     tags: [
-      "Free Domain & Hosting For One Year",
-      "Social Media Integration",
-      "Provide the SSL That secures your website",
-      "6 Months Maintenance Free",
+      "Complimentary Enterprise Hosting & Domain (12 Months)",
+      "Unified Social Media Ecosystem Integration",
+      "End-to-End SSL Encryption & Security Protocols",
+      "Post-Launch Maintenance & Technical Support (6 Months)",
     ],
   },
 ];

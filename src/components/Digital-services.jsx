@@ -1,63 +1,61 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  FaCode,
-  FaLayerGroup,
-  FaPaintBrush,
-  FaTools,
-  FaServer,
+  FaShareAlt,
+  FaBullhorn,
+  FaUsers,
+  FaPalette,
+  FaSearch,
+  FaMicrophoneAlt,
   FaTimes,
 } from "react-icons/fa";
+
 
 const services = [
   {
     title: "Social Media Page Management",
     shortDesc: "Scalable, secure, and high-performance digital brand handling.",
-    fullDesc:
-      "When rapid visibility matters, our Paid Advertising service delivers targeted results. We run high-conversion campaigns on Google, Facebook, and Instagram using precise audience targeting. From ad copy and creatives to A/B testing and bid management, our data-driven approach maximizes ROAS while minimizing wasted spend from day one.",
-    icon: <FaLayerGroup />,
+    fullDesc: "...",
+    icon: <FaShareAlt />,
     image: "/SocialMediaMarketing.jpeg",
   },
   {
     title: "Paid Ads",
     shortDesc: "Result-driven paid campaigns for maximum ROI.",
-    fullDesc:
-      "Traditional ads lack trust. Our Influencer Marketing connects your brand with authentic, highly engaged creators relevant to your niche. We manage creator selection, vetting, contracts, and campaigns end to end. By leveraging influencer credibility, we build genuine brand stories, boost awareness, create human-centric content, and drive conversions through social proof.",
-    icon: <FaTools />,
+    fullDesc: "...",
+    icon: <FaBullhorn />,
     image: "/paid-ads.jpeg",
   },
   {
     title: "Influencer Marketing",
     shortDesc: "Brand collaborations that drive trust and reach.",
-    fullDesc:
-      "Visuals communicate faster than words. Our Graphic Designing service creates impactful, strategy-driven visuals—from logos and social media creatives to brochures and banners. Using color psychology and typography, we craft designs that evoke emotion, strengthen brand identity, and set you apart with a professional, consistent presence across all digital and print channels.",
-    icon: <FaPaintBrush />,
+    fullDesc: "...",
+    icon: <FaUsers />,
     image: "/influencer-marketing.jpeg",
   },
   {
     title: "Graphic Designing",
     shortDesc: "Creative visuals aligned with brand identity.",
-    fullDesc:
-      "A great website means nothing without visibility. Our SEO service boosts your Google rankings through a holistic approach combining technical, on-page, and off-page optimization. We drive consistent, high-quality organic traffic, reduce reliance on paid ads, and build long-term authority for sustainable business growth.",
-    icon: <FaPaintBrush />,
+    fullDesc: "...",
+    icon: <FaPalette />,
     image: "/graphic.jpeg",
   },
   {
     title: "Search Engine Optimization",
     shortDesc: "Improve visibility and organic traffic.",
-    fullDesc:
-      "Your business deserves more than templates. Our Customized Web Development service delivers scalable, secure, and high-performance digital solutions built from scratch. Using modern technologies, we create fast, responsive websites and applications tailored to your unique operations and designed to grow seamlessly with your business.",
-    icon: <FaServer />,
+    fullDesc: "...",
+    icon: <FaSearch />,
     image: "/SearchEngineOptimization.jpeg",
   },
   {
     title: "Podcast Services",
-    shortDesc: "Tailored solutions for business growth.",
-    fullDesc: "Your business deserves more than templates...",
-    icon: <FaCode />,
+    shortDesc: "Amplify Your Brand Voice Through Engaging Audio Content",
+    fullDesc: "...",
+    icon: <FaMicrophoneAlt />,
     image: "/customize-web-development.jpeg",
   },
 ];
+
 
 const DigitalServices = ({ variant = "services" }) => {
   const [activeService, setActiveService] = useState(null);

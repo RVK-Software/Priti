@@ -1,5 +1,6 @@
 import { FaBullhorn, FaChartLine, FaUsers, FaLightbulb } from "react-icons/fa";
 import DigitalServices from "../components/Digital-services";
+import MarketingSixPoints from "../components/MarketingPoints";
 
 const recommendations = [
   {
@@ -83,9 +84,9 @@ const MarketingPage = () => {
   <div className="absolute inset-0 bg-gradient-to-br from-orange-200/40 via-white to-blue-200/40 animate-gradientMove"></div>
 
   {/* Content */}
-  <div className="relative max-w-7xl mx-auto px-4 py-8">
+  <div className="relative max-w-7xl mx-auto px-6 py-8">
     <div className="text-center mb-8">
-      <h2 className="text-[28px] lg:text-4xl font-bold text-gray-900">
+      <h2 className="text-[20px] lg:text-4xl font-bold text-gray-900">
         What We Recommend
       </h2>
       <p className="mt-4 text-gray-600 max-w-4xl mx-auto">
@@ -162,30 +163,7 @@ const MarketingPage = () => {
 
 
       {/* ================= OUR OPINION ================= */}
-      <div className="bg-white py-10">
-        <div className="max-w-6xl mx-auto px-6 text-center text-blakc">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-8">
-            Our Opinion on Marketing Your Product & Services
-          </h2>
-
-          <p className="text-black text-lg leading-relaxed max-w-4xl mx-auto mb-6">
-            Marketing is not about selling aggressively—it is about solving
-            problems clearly. Products don’t fail because they lack features;
-            they fail because customers don’t understand their value.
-          </p>
-
-          <p className="text-black text-lg leading-relaxed max-w-4xl mx-auto mb-6">
-            We advise businesses to focus on education-first marketing.
-            Explain how your product improves lives, saves time, or increases
-            efficiency. When customers understand the “why,” conversions follow naturally.
-          </p>
-
-          <p className="text-black text-lg leading-relaxed max-w-4xl mx-auto">
-            Sustainable growth comes from trust, consistency, and clarity.
-            Marketing should build relationships—not just traffic.
-          </p>
-        </div>
-      </div>
+      <MarketingSixPoints />
 
     </section>
   );

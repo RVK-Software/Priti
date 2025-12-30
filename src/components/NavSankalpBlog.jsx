@@ -53,21 +53,21 @@ const NavSankalpBlog = () => {
       </div>
 
       {/* INTRO */}
-      <div className="max-w-5xl mx-auto px-6 py-16 text-center">
+      <div className="max-w-5xl mx-auto px-6 py-10 text-center">
         <p className="text-gray-700 text-lg leading-relaxed">
           In a rapidly evolving digital India, finding the right connection can
           be the difference between stagnating and soaring. Whether you’re a
           local shop owner, a creator seeking collaborations, or a professional
           searching for your next career move—visibility is everything.
         </p>
-        <p className="mt-6 text-gray-700 text-lg leading-relaxed">
+        <p className="mt-4 text-gray-700 text-lg leading-relaxed">
           NavSankalp is not just a directory. It is a purpose-built ecosystem
           designed to bridge talent, opportunity, and commerce.
         </p>
       </div>
 
       {/* FEATURES */}
-      <div className="max-w-7xl mx-auto px-6 pb-20">
+      <div className="max-w-7xl mx-auto px-6 pb-10">
         <div className="grid md:grid-cols-2 gap-10">
           {features.map((item, index) => (
             <div
@@ -87,7 +87,7 @@ const NavSankalpBlog = () => {
       </div>
 
       {/* WHY NAVSANKALP */}
-      <div className="bg-black text-white py-20">
+      <div className="bg-black text-white py-10">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Why Choose NavSankalp App?
@@ -106,7 +106,7 @@ const NavSankalpBlog = () => {
       </div>
 
       {/* CTA */}
-      <div className="max-w-7xl mx-auto px-6 py-20 text-center">
+      <div className="max-w-7xl mx-auto px-6 py-8 text-center">
         <h3 className="text-2xl lg:text-3xl font-bold text-gray-800">
           Your Journey Starts Here
         </h3>

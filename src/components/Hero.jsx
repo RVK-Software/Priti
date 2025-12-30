@@ -41,12 +41,15 @@ const HeroSlider = () => {
   }, [slides.length]);
 
   return (
-    <section className="relative w-full lg:h-[690px]  overflow-hidden">
-      <div className="w-full h-full pt-16 pb-2 lg:pt-18 lg:pb-0">
+    <section className="relative w-full overflow-hidden
+        min-h-[60vh]
+        md:min-h-full
+        lg:min-h-full">
+      <div className="w-auto h-auto pt-16 pb-2 lg:pt-16 lg:pb-0">
         <img
           src={slides[current]}
           alt={`Banner ${current + 1}`}
-          className="w-full h-full object-cover transition-opacity duration-500"
+          className="w-auto h-full object-cover transition-opacity duration-500"
         />
       </div>
 

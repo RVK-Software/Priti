@@ -41,10 +41,10 @@ const BrandJourney = () => {
   return (
     <section className="relative bg-black/80 py-6 overflow-hidden">
       {/* soft corner gradients */}
-      <div className="absolute -top-28 -right-15 w-90 h-90 bg-orange-300 rounded-full blur-3xl opacity-60" />
-      <div className="absolute top-44 left-15 w-96 h-90 bg-linear-to-r from-orange-500 via-orange-400 to-orange-500 rounded-full blur-3xl opacity-60" />
-      <div className="absolute bottom-24 -left-44 w-90 h-80 bg-orange-300 rounded-full blur-3xl opacity-60" />
-      <div className="absolute bottom-84 right-44 w-90 h-80 bg-linear-to-r from-orange-500 via-orange-400 to-orange-500 rounded-full blur-3xl opacity-60" />
+      <div className="absolute -top-28 -right-[60px] w-[360px] h-[360px] bg-orange-300 rounded-full blur-3xl opacity-60" />
+      <div className="absolute top-30 left-[60px] w-[380px] h-[360px] bg-linear-to-r from-orange-500 via-orange-400 to-orange-500 rounded-full blur-3xl opacity-60" />
+      <div className="absolute bottom-5 -left-[180px] w-[360px] h-[320px] bg-orange-300 rounded-full blur-3xl opacity-60" />
+      <div className="absolute bottom-[240px] right-[280px] w-[360px] h-[320px] bg-linear-to-r from-orange-500 via-orange-400 to-orange-500 rounded-full blur-3xl opacity-60" />
 
       <div className="relative max-w-7xl mx-auto px-6">
         {/* HEADER */}
@@ -61,7 +61,8 @@ const BrandJourney = () => {
         {/* TIMELINE */}
         <div className="relative">
           {/* MOBILE LINE */}
-          <div className="absolute left-1 top-0 h-full w-px bg-gray-200 md:hidden" />
+
+          <div className="absolute -left-2 top-0 h-full w-px bg-gray-200 md:hidden" />
 
           {/* DESKTOP LINE */}
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-gray-200" />
@@ -77,28 +78,34 @@ const BrandJourney = () => {
                 >
                   {/* DOT */}
                   <div
-                    className={`absolute top-2 w-4 h-4 rounded-full bg-gradient-to-r from-orange-400 to-orange-600
-                      ${isEven ? "md:left-1/2" : "md:left-1/2"}
-                      left-2 transform -translate-x-1/2`}
+                    className="
+    absolute top-4
+    -left-1.5 md:left-1/2
+    w-4 h-4 rounded-full
+    bg-gradient-to-r from-orange-400 to-orange-600
+    transform -translate-x-1/2
+  "
                   />
 
                   {/* CONTENT */}
                   <div
                     className={`pl-2 md:pl-0
                        ${
-                        isEven
-                    ? "md:col-start-1 md:text-right md:mt-0"
-        : "md:col-start-2 md:-mt-0"
-    }`}
+                         isEven
+                           ? "md:col-start-1 md:text-right md:mt-0"
+                           : "md:col-start-2 md:-mt-0"
+                       }`}
                   >
-                    <div className="inline-block bg-gray-50 p-4 rounded-xl shadow-sm hover:shadow-md transition max-w-md">
-                      <span className="text-orange-500 font-semibold text-sm">
+                    <div className="inline-block bg-gray-50 px-4 py-3 rounded-[8px] shadow-sm hover:shadow-md transition max-w-md">
+                      <span className="text-orange-500 font-semibold text-xs">
                         {item.step}
                       </span>
-                      <h3 className="text-xl font-semibold text-gray-900 mt-1">
+                      <h3 className="text-lg font-semibold text-gray-900 mt-0.5">
                         {item.title}
                       </h3>
-                      <p className="mt-2 text-gray-600">{item.description}</p>
+                      <p className="mt-1 text-sm text-gray-600 leading-snug">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                 </div>

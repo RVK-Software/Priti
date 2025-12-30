@@ -5,17 +5,17 @@ const industries = [
   {
     title: "MSMEs",
     description:
-      "Custom marketing funnels and software solutions designed to scale operations, optimize workflows, and drive sustainable growth for small and medium enterprises.",
+      "Scalable digital listings and recruitment tools designed to boost business credibility, connect local job seekers, and streamline hiring for sustainable enterprise growth.",
   },
   {
     title: "Influencers & Brands",
     description:
-      "End-to-end campaign management combining technical infrastructure with creative strategy to amplify reach and monetize digital presence effectively.",
+      "End-to-end influencer marketplaces connecting niche talent with brands to amplify credibility, monetize content, and scale digital reach through strategic collaborations",
   },
   {
     title: "Property Owners",
     description:
-      "Sophisticated digital platforms for property marketing, management automation, and customer relationship systems that streamline operations and maximize occupancy rates.",
+      "Credible digital platforms for property listings and management automation that connect owners with verified seekers, streamlining rentals and maximizing occupancy rates",
   },
   {
     title: "Job Seekers",
@@ -53,7 +53,7 @@ const Navsankalp = () => {
               Navsankalp App
             </h2>
 
-            <p className="text-black-600 text-[20px] sm:text-[35px] font-bold max-w-auto">
+            <p className="text-black text-[20px] sm:text-[35px] font-bold max-w-auto">
               Dil Se Dhundho, Yahi Milega
             </p>
           </div>

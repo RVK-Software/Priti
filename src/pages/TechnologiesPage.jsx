@@ -8,6 +8,9 @@ import {
   FaShieldAlt,
 } from "react-icons/fa";
 import Services from "../components/Technologies";
+import TechSixPoints from "../components/TechPoints";
+
+
 
 const technologies = [
   {
@@ -172,6 +175,7 @@ const TechnologiesPage = () => {
           </div>
         </div>
       )}
+      <TechSixPoints />
     </section>
   );
 };

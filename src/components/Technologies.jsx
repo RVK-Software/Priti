@@ -12,21 +12,21 @@ const services = [
   {
     title: "Web Development",
     description:
-      "Transforming business requirements into scalable, secure, and high-performance software solutions.",
+      "Architecting scalable, secure, and high-performance software tailored to complex business requirements.",
     icon: <FaCode />,
     image: "/web development.jpeg",
   },
   {
     title: "App Development",
     description:
-      "Custom Android and iOS applications built for performance, scalability, and user experience.",
+      "Engineering high-performance Android and iOS applications focused on scalability and seamless user experience.",
     icon: <FaMobileAlt />,
     image: "/app development.jpeg",
   },
   {
     title: "Wordpress Web Development",
     description:
-      "Modern, responsive, and SEO-friendly websites using the latest frontend technologies.",
+      "Engineering modern, responsive, SEO-optimized websites powered by cutting-edge frontend technologies.",
     icon: <FaGlobe />,
     image: "/Best WordPress Development Services Agency (1).jpeg",
   },
@@ -47,7 +47,7 @@ const services = [
   {
     title: "Software Development",
     description:
-      "Custom CRM systems that streamline operations and enhance customer relationships.",
+      " Architecting bespoke CRM ecosystems that automate internal workflows and foster long-term customer retention.",
     icon: <FaCogs />,
     image: "/software development.jpeg",
   },
