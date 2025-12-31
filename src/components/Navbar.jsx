@@ -20,13 +20,12 @@ const servicesMenu = [
 
 /* TECHNOLOGIES MENU */
 const technologiesMenu = [
-  { label: "HTML", path: "/technologies" },
-  { label: "CSS", path: "/technologies" },
-  { label: "JavaScript", path: "/technologies" },
-  { label: "React JS", path: "/technologies" },
-  { label: "React Native", path: "/technologies" },
-  { label: "Node.js", path: "/technologies" },
-  { label: "AWS & Deployment", path: "/technologies" },
+  { label: "Web Application Development Custom", path: "/technologies" },
+  { label: "Mobile Application Development", path: "/technologies" },
+  { label: "E-Commerce Solutions Development", path: "/technologies" },
+  { label: "Custom Software Development", path: "/technologies" },
+  { label: "AI & Machine Learning Engineering", path: "/technologies" },
+  { label: "Cloud Computing & DevOps Services", path: "/technologies" },
 ];
 
 const Navbar = () => {
@@ -43,7 +42,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between">
           <div className="flex items-center gap-2">
             <FaPhoneAlt className="text-orange-400" />
-            <span className="text-[14px] lg:text-[16px]">+91 90240 9959</span>
+            <span className="text-[14px] lg:text-[16px]">+91 9024099592</span>
           </div>
           <div className="flex items-center gap-2">
             <FaMapMarkerAlt className="text-orange-400" />

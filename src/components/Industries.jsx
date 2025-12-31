@@ -31,7 +31,7 @@ const Industries = () => {
   return (
     <section className="bg-gray-50 py-3">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* LEFT CONTENT */}
           <div>
             <span className="inline-block mb-4 px-4 py-1 text-xl font-semibold text-orange-500 bg-orange-100 rounded-xl">
@@ -71,7 +71,7 @@ const Industries = () => {
           </div>
 
           {/* RIGHT INDUSTRIES GRID */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 gap-4">
             {industries.map((industry) => (
               <div
                 key={industry.title}

@@ -34,7 +34,7 @@ const ContactSection = () => {
               className="flex items-center gap-4 hover:text-orange-400 transition"
             >
               <FaPhoneAlt className="text-lg text-orange-400" />
-              <span>+91 902409959</span>
+              <span>+91 9024099592</span>
             </a>
 
             {/* WHATSAPP */}
