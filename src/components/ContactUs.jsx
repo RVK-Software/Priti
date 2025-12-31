@@ -51,7 +51,7 @@ const ContactSection = () => {
             {/* LOCATION */}
             <div className="flex items-center gap-4">
               <FaMapMarkerAlt className="text-lg text-orange-400" />
-              <span>Jaipur, Rajasthan, India</span>
+              <span>D-73 kusum Vihar lane no.10, Ram Nagariya Rd, Jagatpura, Jaipur, Rajasthan 302017</span>
             </div>
           </div>
         </div>
