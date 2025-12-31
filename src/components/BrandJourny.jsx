@@ -39,7 +39,7 @@ const journeySteps = [
 
 const BrandJourney = () => {
   return (
-    <section className="relative bg-black/80 py-6 overflow-hidden">
+    <section className="relative bg-black/80 py-4 overflow-hidden">
       {/* soft corner gradients */}
       <div className="absolute -top-28 -right-[60px] w-[360px] h-[360px] bg-orange-300 rounded-full blur-3xl opacity-60" />
       <div className="absolute top-30 left-[60px] w-[380px] h-[360px] bg-linear-to-r from-orange-500 via-orange-400 to-orange-500 rounded-full blur-3xl opacity-60" />
@@ -96,11 +96,11 @@ const BrandJourney = () => {
                            : "md:col-start-2 md:-mt-0"
                        }`}
                   >
-                    <div className="inline-block bg-gray-50 px-4 py-3 rounded-[8px] shadow-sm hover:shadow-md transition max-w-md">
-                      <span className="text-orange-500 font-semibold text-xs">
+                    <div className="inline-block bg-gray-50 px-2 py-2 rounded-[8px] shadow-sm hover:shadow-md transition max-w-md">
+                      <span className="text-orange-500 font-semibold text-[14px]">
                         {item.step}
                       </span>
-                      <h3 className="text-lg font-semibold text-gray-900 mt-0.5">
+                      <h3 className="text-[16px] font-semibold text-gray-900 mt-0.5">
                         {item.title}
                       </h3>
                       <p className="mt-1 text-sm text-gray-600 leading-snug">

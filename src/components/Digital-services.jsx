@@ -70,21 +70,21 @@ const DigitalServices = ({ variant = "services" }) => {
   };
 
   return (
-    <section className="bg-gray-50 py-8 px-2">
+    <section className="bg-gray-50 py-4 px-2">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800">
+        <div className="text-center mb-6">
+          <h2 className="text-2xl font-bold text-gray-800">
             Our Digital Marketing Services
           </h2>
-          <p className="mt-4 text-gray-600 max-w-4xl mx-auto text-lg">
+          <p className="mt-4 text-gray-600 max-w-4xl mx-auto text-[16px]">
             We build reliable digital solutions using modern marketing and
             technology practices.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-2">
           {services.map((service, index) => {
             const isHome = variant === "home";
 
@@ -109,10 +109,10 @@ const DigitalServices = ({ variant = "services" }) => {
                 {isHome && <div className="absolute inset-0 bg-black/60"></div>}
 
                 {/* CONTENT */}
-                <div className="relative z-10 p-6 h-full flex flex-col justify-end">
+                <div className="relative z-10 p-3 h-full flex flex-col justify-end">
                   <div className="flex items-center gap-3 mb-3">
                     <div
-                      className={`w-12 h-12 flex items-center justify-center rounded-lg text-xl
+                      className={`w-8 h-8 flex items-center justify-center rounded-lg text-xl
       ${isHome ? "bg-white/20 text-orange-400" : "text-orange-400"}`}
                     >
                       {service.icon}

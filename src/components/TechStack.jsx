@@ -1,24 +1,24 @@
 const TechStack = () => {
   return (
-    <section className="bg-black/20 py-6 mb-4 px-4 sm:px-6 lg:px-10">
+    <section className="bg-black/20 py-4 mb-4 px-2 sm:px-2 lg:px-10">
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
         <div className="text-center mb-6">
-          <h2 className="text-3xl sm:text-3xl lg:text-5xl font-bold text-black">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-black">
             Strategic Power for <span className="text-orange-500">Modern Businesses</span>
           </h2>
-          <p className="mt-2 text-black text-[16px] sm:text-[25px] max-w-auto mx-auto">
+          <p className="mt-2 text-black text-[15px] sm:text-[20px] max-w-auto mx-auto">
             Built with modern, scalable technologies to deliver high-performance,
             secure, and future-ready digital solutions.
           </p>
         </div> 
 
         {/* Cards */}
-        <div className="grid grid-cols-1  lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1  lg:grid-cols-3 gap-4">
 
           {/* Frontend */}
-          <div className="group bg-white/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8
+          <div className="group bg-white/50 backdrop-blur-sm border border-white/10 rounded-2xl p-4
                           transition-all duration-300 hover:-translate-y-2
                           hover:border-orange-500/40 hover:shadow-[0_20px_40px_rgba(255,115,0,0.2)]">
 
@@ -42,15 +42,15 @@ const TechStack = () => {
           </div>
 
           {/* Backend */}
-          <div className="group bg-white/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8
+          <div className="group bg-white/50 backdrop-blur-sm border border-white/10 rounded-2xl p-4
                           transition-all duration-300 hover:-translate-y-2
                           hover:border-orange-500/40 hover:shadow-[0_20px_40px_rgba(255,115,0,0.2)]">
 
-            <h3 className="text-2xl font-semibold text-orange-400 mb-6 group-hover:text-orange-500">
+            <h3 className="text-2xl font-semibold text-orange-400 mb-3 group-hover:text-orange-500">
               Backend Power
             </h3>
 
-            <ul className="space-y-4 text-[16px]">
+            <ul className="space-y-3 text-[16px]">
               {[
                 "Node.js for scalable server architecture",
                 "Express for robust API development",
@@ -65,15 +65,15 @@ const TechStack = () => {
             </ul>
           </div>
 
-          <div className="group bg-white/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8
+          <div className="group bg-white/50 backdrop-blur-sm border border-white/10 rounded-2xl p-4
                           transition-all duration-300 hover:-translate-y-2
                           hover:border-orange-500/40 hover:shadow-[0_20px_40px_rgba(255,115,0,0.2)]">
 
-            <h3 className="text-2xl font-semibold text-orange-400 mb-6 group-hover:text-orange-500">
+            <h3 className="text-2xl font-semibold text-orange-400 mb-3 group-hover:text-orange-500">
               Marketing Mastery
             </h3>
 
-            <ul className="space-y-4 text-[16px]">
+            <ul className="space-y-2 text-[16px]">
               {[
                 "Search Engine Optimization for organic traffic",
                 "Social Media Management for engagement",

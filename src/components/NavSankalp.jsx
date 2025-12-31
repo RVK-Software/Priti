@@ -32,6 +32,7 @@ const Navsankalp = () => {
         px-3 sm:px-6 lg:px-8
         py-6
         min-h-[70vh] sm:min-h-[80vh] lg:min-h-[90vh]
+        min-w-full
         bg-[url('/NavSankalp.jpg')]
         bg-cover
         bg-no-repeat

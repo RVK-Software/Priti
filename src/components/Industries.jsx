@@ -29,7 +29,7 @@ const industries = [
 
 const Industries = () => {
   return (
-    <section className="bg-gray-50 py-6">
+    <section className="bg-gray-50 py-3">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* LEFT CONTENT */}

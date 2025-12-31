@@ -36,7 +36,7 @@ const TechSixPoints = () => {
     <section className="py-12 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900">
-          Technology That Works for You
+          <span className="text-orange-500">Technology</span> That Works for You
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

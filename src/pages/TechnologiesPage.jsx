@@ -15,33 +15,33 @@ import TechSixPoints from "../components/TechPoints";
 const technologies = [
   {
     icon: <FaCode />,
-    title: "Modern Web Development",
-    desc: "Scalable, high-performance web applications using modern frameworks and clean architecture.",
+    title: "Web Application Development",
+    desc: "Custom, responsive, and scalable web solutions using modern technologies.",
   },
   {
     icon: <FaMobileAlt />,
-    title: "Mobile Technologies",
-    desc: "Cross-platform and native mobile solutions designed for speed, usability, and growth.",
+    title: "Mobile Application Development",
+    desc: "Native and cross-platform apps for Android and iOS.",
   },
   {
     icon: <FaCloud />,
-    title: "Cloud & DevOps",
-    desc: "Cloud-native infrastructure, CI/CD pipelines, and scalable deployment strategies.",
+    title: "E-Commerce Solutions Development",
+    desc: "Secure, scalable online stores with payment gateway and inventory integration.",
   },
   {
     icon: <FaDatabase />,
-    title: "Data & APIs",
-    desc: "Robust databases and secure APIs that power reliable, data-driven applications.",
+    title: "Custom Software Development",
+    desc: "Tailored software solutions designed to meet specific business requirements.",
   },
   {
     icon: <FaCogs />,
-    title: "Automation & Integrations",
+    title: "AI & Machine Learning Engineering",
     desc: "Process automation and third-party integrations to streamline operations.",
   },
   {
     icon: <FaShieldAlt />,
-    title: "Security & Compliance",
-    desc: "Security-first development with compliance-ready architecture.",
+    title: "Cloud Computing & DevOps Services",
+    desc: "Cloud infrastructure setup, CI/CD pipelines, deployment automation, and system optimization.",
   },
 ];
 
@@ -120,33 +120,6 @@ const TechnologiesPage = () => {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* ================= OUR VIEW ================= */}
-      <div className="bg-black py-8 relative overflow-hidden">
-        <div className="absolute -top-20 -left-20 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-
-        <div className="relative max-w-6xl mx-auto px-3 text-center text-white">
-          <h2 className="text-2xl lg:text-3xl font-bold mb-8">
-            Our View on Technology
-          </h2>
-
-          <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto mb-6">
-            Technology should never be built for today alone. It must evolve,
-            scale, and adapt as your business grows.
-          </p>
-
-          <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto mb-6">
-            We believe in choosing the right tools—not the trendiest ones.
-            Strong foundations, clean code, and secure systems always outperform shortcuts.
-          </p>
-
-          <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">
-            Our goal is to create technology that quietly works in the background
-            while your business moves forward confidently.
-          </p>
         </div>
       </div>
 

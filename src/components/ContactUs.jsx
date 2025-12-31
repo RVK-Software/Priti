@@ -1,5 +1,10 @@
 // ContactSection.jsx
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const ContactSection = () => {
   return (
@@ -14,16 +19,36 @@ const ContactSection = () => {
           </p>
 
           <div className="space-y-5">
-            <div className="flex items-center gap-4">
+            {/* EMAIL */}
+            <a
+              href="mailto:info@rvksoftware.com"
+              className="flex items-center gap-4 hover:text-orange-400 transition"
+            >
               <FaEnvelope className="text-lg text-orange-400" />
               <span>info@rvksoftware.com</span>
-            </div>
+            </a>
 
-            <div className="flex items-center gap-4">
+            {/* PHONE */}
+            <a
+              href="tel:+91902409959"
+              className="flex items-center gap-4 hover:text-orange-400 transition"
+            >
               <FaPhoneAlt className="text-lg text-orange-400" />
               <span>+91 902409959</span>
-            </div>
+            </a>
 
+            {/* WHATSAPP */}
+            <a
+              href="https://wa.me/91902409959"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 hover:text-orange-400 transition"
+            >
+              <FaWhatsapp className="text-lg text-orange-400" />
+              <span>Chat on WhatsApp</span>
+            </a>
+
+            {/* LOCATION */}
             <div className="flex items-center gap-4">
               <FaMapMarkerAlt className="text-lg text-orange-400" />
               <span>Jaipur, Rajasthan, India</span>

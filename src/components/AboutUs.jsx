@@ -3,22 +3,22 @@ import { Link } from "react-router-dom";
 
 const AboutUs = ({ showButton = true }) => {
   return (
-    <section className="bg-gray-50 py-6">
+    <section className="bg-gray-50 py-4">
       <div className="mx-auto lg:px-12 px-2 py-2">
-        <div className="grid lg:grid-cols-[60%_40%] gap-8 items-center justify-around">
+        <div className="grid lg:grid-cols-[60%_40%] gap-2 items-center justify-around">
           
           {/* CONTENT SECTION */}
-          <div className="space-y-10 px-4 sm:px-6  lg:px-0">
+          <div className="space-y-3 px-4 sm:px-6  lg:px-0">
             <h2 className="text-[24px] text-start lg:text-5xl font-bold text-gray-800 leading-snug">
               Welcome to <span className="text-orange-400">RVK Software</span>
             </h2>
 
-            <p className="text-gray-600 text-[18px] leading-relaxed">
+            <p className="text-gray-600 text-[16px] leading-relaxed">
              We are a technology-driven digital agency committed to innovation and engineering excellence. We specialize in building scalable, secure software and executing data-driven digital marketing strategies that empower modern businesses. By integrating cutting-edge technologies with performance marketing, we help brands optimize operations, enhance User Experience (UX), and drive measurable ROI-focused growth.  
             </p>
             <p className="text-[20px] font-semibold">Our Core Pillars of Digital Excellence</p>
 
-            <ul className="grid sm:grid-cols-2 text-[18px] gap-6 mt-6">
+            <ul className="grid sm:grid-cols-2 text-[17px] gap-3 mt-4">
               {[
                 "Standardized Agile Development",
                 "Full-Stack Engineering & Marketing Experts",
@@ -38,7 +38,7 @@ const AboutUs = ({ showButton = true }) => {
             {showButton && (
               <Link
                 to="/about"
-                className="inline-flex mt-5 items-center gap-2 bg-orange-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-500 transition"
+                className="inline-flex mt-3 items-center gap-2 bg-orange-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-500 transition"
               >
                 Learn More
                 <span className="text-lg">→</span>

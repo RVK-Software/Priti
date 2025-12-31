@@ -36,7 +36,7 @@ const CTA = () => {
             {/* RIGHT CONTENT */}
             <div className="relative flex justify-center items-center">
               <img
-                src="/CTA-image.jpg"
+                src="/CTA-image (2).jpg"
                 alt="App Screen"
                 className="w-full h-[280px] rounded-2xl object-contain"
               />
