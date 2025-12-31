@@ -9,7 +9,6 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 //.env
 
-
 const ContactSection = () => {
   const {
     register,
@@ -20,9 +19,13 @@ const ContactSection = () => {
 
   const onSubmit = async (data) => {
     try {
-      await axios.post(`${import.meta.env.VITE_BACKEND_API_URL}/contact`, data, {
-        headers: { "Content-Type": "application/json" },
-      });
+      await axios.post(
+        `${import.meta.env.VITE_BACKEND_API_URL}/contact`,
+        data,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
       // optional: toast / alert
       alert("Message sent successfully!");
       reset();
@@ -64,7 +67,9 @@ const ContactSection = () => {
 
             {/* WHATSAPP */}
             <a
-              href="https://wa.me/919024099592"
+              href={`https://wa.me/919024099592?text=${encodeURIComponent(
+                "Hello RVK Software Team, I’m interested in your services and would like to discuss my project."
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 hover:text-orange-400 transition"
@@ -74,10 +79,14 @@ const ContactSection = () => {
             </a>
 
             {/* LOCATION */}
-            <div className="flex items-center gap-4">
-              <FaMapMarkerAlt className="text-lg text-orange-400" />
-              <span>D-73 kusum Vihar lane no.10, Ram Nagariya Rd, Jagatpura, Jaipur, Rajasthan 302017</span>
-            </div>
+           <div className="flex items-start gap-4">
+  <FaMapMarkerAlt className="text-xl text-orange-400 shrink-0 mt-1" />
+  <span className="text-base leading-relaxed">
+    D-73 kusum Vihar lane no.10, Ram Nagariya Rd, Jagatpura, Jaipur,
+    Rajasthan 302017
+  </span>
+</div>
+
           </div>
         </div>
 
@@ -101,12 +110,10 @@ const ContactSection = () => {
               type="text"
               placeholder="John Doe"
               {...register("name", { required: "Full name is required" })}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
             />
             {errors.name && (
-              <p className="text-sm text-red-500 mt-1">
-                {errors.name.message}
-              </p>
+              <p className="text-sm text-red-500 mt-1">{errors.name.message}</p>
             )}
           </div>
 
@@ -120,12 +127,11 @@ const ContactSection = () => {
               {...register("email", {
                 required: "Email is required",
                 pattern: {
-                  value:
-                    /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                  value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
                   message: "Enter a valid email",
                 },
               })}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300"
             />
             {errors.email && (
               <p className="text-sm text-red-500 mt-1">
@@ -142,7 +148,7 @@ const ContactSection = () => {
               rows="4"
               placeholder="Tell us about your project..."
               {...register("message", { required: "Message is required" })}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300"
             ></textarea>
             {errors.message && (
               <p className="text-sm text-red-500 mt-1">

@@ -149,7 +149,7 @@ const Navbar = () => {
       </header>
 
       {/* MOBILE MENU (GLASSMORPHIC, PARTIAL HEIGHT) */}
-     {/* MOBILE MENU (GLASSMORPHIC, PARTIAL HEIGHT) */}
+    
 {menuOpen && (
   <div className="fixed top-24 left-1/2 -translate-x-1/2 w-[92%] bg-white/40 backdrop-blur-xl shadow-2xl rounded-2xl z-50 lg:hidden">
     <ul className="px-6 py-6 space-y-6 text-base font-medium text-gray-900">

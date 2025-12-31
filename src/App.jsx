@@ -10,6 +10,7 @@ import CTA from "./components/CTA";
 import NavSankalpBlog from "./components/NavSankalpBlog";
 import TechnologiesPage from "./pages/TechnologiesPage";
 import CareerPage from "./pages/CareersPage";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/career" element = {<CareerPage />} />
       </Routes>
       <CTA />
+      <FloatingWhatsApp />
       <Footer />
     </>
   );
