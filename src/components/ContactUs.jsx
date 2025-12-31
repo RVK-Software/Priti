@@ -5,8 +5,33 @@ import {
   FaMapMarkerAlt,
   FaWhatsapp,
 } from "react-icons/fa";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+//.env
+
 
 const ContactSection = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    try {
+      await axios.post(`${import.meta.env.VITE_BACKEND_API_URL}/contact`, data, {
+        headers: { "Content-Type": "application/json" },
+      });
+      // optional: toast / alert
+      alert("Message sent successfully!");
+      reset();
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <div className="bg-white shadow-xl rounded-2xl grid lg:grid-cols-2 overflow-hidden">
       {/* LEFT CONTENT */}
@@ -39,7 +64,7 @@ const ContactSection = () => {
 
             {/* WHATSAPP */}
             <a
-              href="https://wa.me/91902409959"
+              href="https://wa.me/919024099592"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 hover:text-orange-400 transition"
@@ -67,7 +92,7 @@ const ContactSection = () => {
           Send Us a Message
         </h3>
 
-        <form className="space-y-5">
+        <form className="space-y-5" onSubmit={handleSubmit(onSubmit)}>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Full Name
@@ -75,8 +100,14 @@ const ContactSection = () => {
             <input
               type="text"
               placeholder="John Doe"
+              {...register("name", { required: "Full name is required" })}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+            {errors.name && (
+              <p className="text-sm text-red-500 mt-1">
+                {errors.name.message}
+              </p>
+            )}
           </div>
 
           <div>
@@ -86,8 +117,21 @@ const ContactSection = () => {
             <input
               type="email"
               placeholder="john@example.com"
+              {...register("email", {
+                required: "Email is required",
+                pattern: {
+                  value:
+                    /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                  message: "Enter a valid email",
+                },
+              })}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+            {errors.email && (
+              <p className="text-sm text-red-500 mt-1">
+                {errors.email.message}
+              </p>
+            )}
           </div>
 
           <div>
@@ -97,15 +141,22 @@ const ContactSection = () => {
             <textarea
               rows="4"
               placeholder="Tell us about your project..."
+              {...register("message", { required: "Message is required" })}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             ></textarea>
+            {errors.message && (
+              <p className="text-sm text-red-500 mt-1">
+                {errors.message.message}
+              </p>
+            )}
           </div>
 
           <button
             type="submit"
-            className="w-full bg-orange-400 text-white py-3 rounded-lg font-semibold hover:bg-orange-500 transition"
+            disabled={isSubmitting}
+            className="w-full bg-orange-400 text-white py-3 rounded-lg font-semibold hover:bg-orange-500 transition disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            Submit Message
+            {isSubmitting ? "Sending..." : "Submit Message"}
           </button>
         </form>
       </div>
