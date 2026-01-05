@@ -11,6 +11,7 @@ import NavSankalpBlog from "./components/NavSankalpBlog";
 import TechnologiesPage from "./pages/TechnologiesPage";
 import CareerPage from "./pages/CareersPage";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
+import FloatingCall from "./components/FloatingContact";
 
 const App = () => {
   return (
@@ -27,7 +28,9 @@ const App = () => {
         <Route path="/career" element = {<CareerPage />} />
       </Routes>
       <CTA />
+      <FloatingCall />
       <FloatingWhatsApp />
+
       <Footer />
     </>
   );
